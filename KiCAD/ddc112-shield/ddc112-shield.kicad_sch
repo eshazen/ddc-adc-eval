@@ -8,6 +8,263 @@
 		(date "mar. 31 mars 2015")
 	)
 	(lib_symbols
+		(symbol "74xGxx:74AHC1G86"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -2.54 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "74AHC1G86"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single XOR Gate, Low-Voltage CMOS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Single Gate XOR LVC CMOS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT* SG-*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "74AHC1G86_0_1"
+				(arc
+					(start -8.89 5.08)
+					(mid -6.7858 0)
+					(end -8.89 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -7.62 5.08)
+					(mid -5.838 0)
+					(end -7.62 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 2.54) (xy -6.35 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -2.54) (xy -6.35 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(arc
+					(start 5.08 0)
+					(mid 3.202 -3.202)
+					(end 0 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 5.08)
+					(mid 3.2271 3.2271)
+					(end 5.08 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 5.08) (xy -7.62 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -5.08) (xy -7.62 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "74AHC1G86_1_1"
+				(pin input line
+					(at -15.24 2.54 0)
+					(length 7.62)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -2.54 0)
+					(length 7.62)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 0 180)
+					(length 7.62)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Amplifier_Operational:LM358"
 			(pin_names
 				(offset 0.127)
@@ -1781,50 +2038,34 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Oscillator:CXO_DIP8"
+		(symbol "Jumper:Jumper_2_Bridged"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254)
+				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Y"
-				(at -5.08 6.35 0)
+			(property "Reference" "JP"
+				(at 0 1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "CXO_DIP8"
-				(at 1.27 -6.35 0)
+			(property "Value" "Jumper_2_Bridged"
+				(at 0 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "Oscillator:Oscillator_DIP-8"
-				(at 11.43 -8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
-				(at -2.54 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Crystal Clock Oscillator, DIP8-style metal package"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1833,7 +2074,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Crystal Clock Oscillator"
+			(property "Datasheet" "~"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1842,7 +2083,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Oscillator*DIP*8*"
+			(property "Description" "Jumper, 2-pole, closed/bridged"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1851,23 +2092,39 @@
 					(hide yes)
 				)
 			)
-			(symbol "CXO_DIP8_0_1"
-				(rectangle
-					(start -5.08 5.08)
-					(end 5.08 -5.08)
+			(property "ki_keywords" "Jumper SPST"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Jumper_2_Bridged_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -1.905 -0.635) (xy -1.27 -0.635) (xy -1.27 0.635) (xy -0.635 0.635) (xy -0.635 -0.635) (xy 0 -0.635)
-						(xy 0 0.635) (xy 0.635 0.635) (xy 0.635 -0.635)
-					)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
 					(stroke
 						(width 0)
 						(type default)
@@ -1877,11 +2134,25 @@
 					)
 				)
 			)
-			(symbol "CXO_DIP8_1_1"
-				(pin input line
-					(at -7.62 0 0)
+			(symbol "Jumper_2_Bridged_0_1"
+				(arc
+					(start -1.524 0.254)
+					(mid 0 0.762)
+					(end 1.524 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Bridged_1_1"
+				(pin passive line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "EN"
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1896,53 +2167,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 7.62 270)
+				(pin passive line
+					(at 5.08 0 180)
 					(length 2.54)
-					(name "Vcc"
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4345,12 +4580,6 @@
 		(uuid "258c7412-d9b8-4209-9c81-91f5a31dc1aa")
 	)
 	(junction
-		(at 142.24 187.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2751a3ff-2cc3-478c-b2d2-69c71b316d4b")
-	)
-	(junction
 		(at 64.77 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4367,12 +4596,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5194c462-3f49-4fcf-a9dd-c13e7504232b")
-	)
-	(junction
-		(at 142.24 171.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "539260d7-4b8c-4e94-bd4c-bfb71fb91fa0")
 	)
 	(junction
 		(at 68.58 41.91)
@@ -4902,16 +5125,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 171.45) (xy 125.73 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c3a63f8-4c35-4d8b-a938-4bf301c49317")
-	)
-	(wire
-		(pts
 			(xy 262.89 59.69) (xy 275.59 59.69)
 		)
 		(stroke
@@ -4929,16 +5142,6 @@
 			(type default)
 		)
 		(uuid "504ff3fd-4b80-4731-8d3d-e19682177121")
-	)
-	(wire
-		(pts
-			(xy 125.73 187.96) (xy 125.73 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "556733c2-e86b-40b5-ad92-970bdfa63a32")
 	)
 	(wire
 		(pts
@@ -4972,23 +5175,13 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 179.07) (xy 149.86 179.07)
+			(xy 115.57 176.53) (xy 128.27 176.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "655f30ca-85bb-4c30-91e9-8c990315b809")
-	)
-	(wire
-		(pts
-			(xy 142.24 186.69) (xy 142.24 187.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68720ae2-e5f1-49a1-8a06-4369085dca97")
+		(uuid "66d84293-753f-4ccb-ab1d-9a41c8e7166a")
 	)
 	(wire
 		(pts
@@ -5039,6 +5232,16 @@
 			(type default)
 		)
 		(uuid "746c08f9-e132-4dd0-bfe3-85f02d6012e9")
+	)
+	(wire
+		(pts
+			(xy 123.19 181.61) (xy 128.27 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "778669b0-77d0-4d7d-b207-45786f920818")
 	)
 	(wire
 		(pts
@@ -5192,16 +5395,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 187.96) (xy 142.24 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "91ac54c5-4023-4ab5-99fc-f72a61be203e")
-	)
-	(wire
-		(pts
 			(xy 234.95 62.23) (xy 222.25 62.23)
 		)
 		(stroke
@@ -5282,6 +5475,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 156.21) (xy 123.19 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aab91397-aa45-4721-a331-72818a2b8439")
+	)
+	(wire
+		(pts
 			(xy 222.25 59.69) (xy 234.95 59.69)
 		)
 		(stroke
@@ -5332,16 +5535,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 187.96) (xy 125.73 187.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b43d2223-ee7d-46c6-8c39-78b0f69d042f")
-	)
-	(wire
-		(pts
 			(xy 125.73 74.93) (xy 125.73 72.39)
 		)
 		(stroke
@@ -5352,13 +5545,13 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 171.45) (xy 125.73 171.45)
+			(xy 151.13 137.16) (xy 151.13 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b6e367ba-af4f-443e-b956-2e4573408b7f")
+		(uuid "b6a492ad-615f-4914-9722-4eac9c802860")
 	)
 	(wire
 		(pts
@@ -5800,6 +5993,16 @@
 		)
 		(uuid "5588f83a-c410-43f8-9f87-3ca002b4493f")
 	)
+	(label "OC0A{slash}6"
+		(at 115.57 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c2ddf43-b106-47c6-a78e-38c29a037acc")
+	)
 	(label "MISO{slash}12"
 		(at 184.15 110.49 180)
 		(effects
@@ -5900,6 +6103,16 @@
 		)
 		(uuid "ae2c9582-b445-44bd-b371-7fc74f6cf852")
 	)
+	(label "OC1A{slash}9"
+		(at 115.57 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7c128f6-4fbd-40aa-96bb-a63c0a1e03f1")
+	)
 	(label "A0"
 		(at 222.25 57.15 0)
 		(effects
@@ -5930,7 +6143,7 @@
 		)
 		(uuid "c348793d-eec0-4f33-9b91-2cae8b4224a4")
 	)
-	(label "*6"
+	(label "OC0A{slash}6"
 		(at 275.59 59.69 180)
 		(effects
 			(font
@@ -5950,7 +6163,7 @@
 		)
 		(uuid "cba886fc-172a-42fe-8e4c-daace6eaef8e")
 	)
-	(label "*9"
+	(label "OC1A{slash}9"
 		(at 275.59 44.45 180)
 		(effects
 			(font
@@ -6880,6 +7093,72 @@
 		)
 	)
 	(symbol
+		(lib_name "VCC_1")
+		(lib_id "power:VCC")
+		(at 143.51 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "16b9d81a-1ff2-426f-a6a4-d8d156f7d390")
+		(property "Reference" "#PWR016"
+			(at 143.51 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 147.32 167.894 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 143.51 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "870e2073-e138-4406-a60a-db31bb24952f")
+		)
+		(instances
+			(project "ddc112-shield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5VA")
 		(at 114.3 64.77 0)
 		(unit 1)
@@ -6939,6 +7218,72 @@
 			(project ""
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 138.43 168.91 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1dffaf0f-af01-417d-b57c-e890fee181b5")
+		(property "Reference" "#PWR019"
+			(at 138.43 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 134.62 169.672 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.43 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 138.43 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "74b55ec5-2f95-47bb-b89a-19a162e918d3")
+		)
+		(instances
+			(project "ddc112-shield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -7009,6 +7354,73 @@
 			(project "ddc112-shield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "VCC_1")
+		(lib_id "power:VCC")
+		(at 138.43 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2505a57b-2383-4c7a-9b72-80a8ec73b223")
+		(property "Reference" "#PWR015"
+			(at 138.43 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 138.43 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.43 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 138.43 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8eabc65e-80c1-4107-b7be-fb04ee66757c")
+		)
+		(instances
+			(project "ddc112-shield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -7272,72 +7684,6 @@
 			(project "ddc112-shield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 142.24 189.23 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "33723aa3-56ec-4885-bfa3-37cc67257c22")
-		(property "Reference" "#PWR016"
-			(at 142.24 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 138.43 189.992 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 142.24 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1f9f76bf-8727-4acd-9758-58a39247be4c")
-		)
-		(instances
-			(project "ddc112-shield"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -8046,72 +8392,6 @@
 		)
 	)
 	(symbol
-		(lib_name "VCC_1")
-		(lib_id "power:VCC")
-		(at 142.24 171.45 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7bdc31cf-0b59-45ca-8030-b4866f6fadd1")
-		(property "Reference" "#PWR015"
-			(at 142.24 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 145.542 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 142.24 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ff197215-6062-46fc-a4e5-cd1aca110eca")
-		)
-		(instances
-			(project "ddc112-shield"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 184.15 144.78 90)
 		(unit 1)
@@ -8397,6 +8677,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:Jumper_2_Bridged")
+		(at 120.65 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "99000fda-748a-401e-a8f8-fd8eae56feea")
+		(property "Reference" "JP1"
+			(at 122.428 166.624 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JPR2"
+			(at 117.094 166.624 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, closed/bridged"
+			(at 120.65 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "add5151f-4cdb-4495-9a1f-d701e8a86e59")
+		)
+		(pin "1"
+			(uuid "102ee1fc-0993-4811-8666-20f4be97e230")
+		)
+		(instances
+			(project ""
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Amplifier_Operational:LM358")
 		(at 80.01 39.37 0)
 		(unit 3)
@@ -8543,6 +8890,82 @@
 			(project "ddc112-shield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "74xGxx:74AHC1G86")
+		(at 143.51 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a8c32afe-52a2-4b76-be6d-50e98886dff1")
+		(property "Reference" "U4"
+			(at 146.304 170.688 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74AHC1G86"
+			(at 150.622 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+			(at 143.51 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single XOR Gate, Low-Voltage CMOS"
+			(at 143.51 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "2ae1aac2-8fe5-444e-8b87-f1a4cd4464aa")
+		)
+		(pin "3"
+			(uuid "b4804db0-c9f1-4628-9db4-fbdadb8dcfaa")
+		)
+		(pin "1"
+			(uuid "845a2a65-3a00-4e3b-b859-341e3129b5fb")
+		)
+		(pin "5"
+			(uuid "a3f19d4c-cc1e-4f02-b667-e68500f7adf1")
+		)
+		(pin "2"
+			(uuid "180f60d3-2bfe-4296-857e-65beed6016e7")
+		)
+		(instances
+			(project ""
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -8887,35 +9310,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 125.73 181.61 0)
+		(lib_id "power:GND")
+		(at 143.51 189.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "be87a257-6c67-4b12-83a9-6d28b45eba71")
-		(property "Reference" "C7"
-			(at 128.27 180.3462 0)
+		(uuid "be75a1f0-2cf0-46bf-b111-128b9c0c64e8")
+		(property "Reference" "#PWR018"
+			(at 143.51 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 128.27 182.8862 0)
+		(property "Value" "GND"
+			(at 147.32 189.992 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 125.73 181.61 0)
+			(at 143.51 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8923,8 +9344,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 125.73 181.61 0)
+		(property "Datasheet" ""
+			(at 143.51 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8932,8 +9353,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 125.73 181.61 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 143.51 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8942,88 +9363,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a3dfab00-7267-4d35-b594-1b6869119856")
-		)
-		(pin "2"
-			(uuid "53e357d2-0eea-4dd6-9404-e323adb8c66b")
+			(uuid "90a66372-b3d8-4e4b-b4d0-6ea580fbe9d8")
 		)
 		(instances
 			(project "ddc112-shield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Oscillator:CXO_DIP8")
-		(at 142.24 179.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c07b7e2d-d7d6-4efd-8065-8a9cbb6109ee")
-		(property "Reference" "Y1"
-			(at 146.558 185.674 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10MHZ"
-			(at 150.114 187.706 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Oscillator:Oscillator_DIP-8"
-			(at 153.67 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
-			(at 139.7 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Crystal Clock Oscillator, DIP8-style metal package"
-			(at 142.24 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "8"
-			(uuid "45096242-b5c1-46a5-b0ea-4cb6ce34d3d7")
-		)
-		(pin "4"
-			(uuid "c80f90eb-dfb1-4597-9260-19026140477b")
-		)
-		(pin "5"
-			(uuid "798d1aec-0959-4d80-bac4-87ccfbd81e89")
-		)
-		(pin "1"
-			(uuid "c1437477-d220-4bcf-99e5-38d72717eb0d")
-		)
-		(instances
-			(project ""
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "Y1")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -9100,6 +9445,82 @@
 		)
 	)
 	(symbol
+		(lib_id "74xGxx:74AHC1G86")
+		(at 138.43 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d2977785-5471-4d64-8956-e7c5b7a1d9cb")
+		(property "Reference" "U5"
+			(at 140.716 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74AHC1G86"
+			(at 145.034 152.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.43 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+			(at 138.43 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single XOR Gate, Low-Voltage CMOS"
+			(at 138.43 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "9f92c258-06b8-4141-9e81-cd2d2b4974c9")
+		)
+		(pin "3"
+			(uuid "833e9913-f057-454a-a1e9-d67524f70cc0")
+		)
+		(pin "1"
+			(uuid "a8ead21d-b2dc-484d-8fd2-1e5314313b4b")
+		)
+		(pin "5"
+			(uuid "23fb2e46-2de5-4045-acf4-436f2c77186a")
+		)
+		(pin "2"
+			(uuid "10351d1e-4b33-4c84-a9ef-8e6a5fb0de83")
+		)
+		(instances
+			(project "ddc112-shield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 121.92 69.85 0)
 		(mirror y)
@@ -9164,6 +9585,140 @@
 			(project "ddc112-shield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 119.38 161.29 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "da257177-d674-4eb2-9000-14ab0204d094")
+		(property "Reference" "R5"
+			(at 117.602 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 122.174 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.634 160.274 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 119.38 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d5b8f28e-27ce-482e-91f2-ab5392e9164f")
+		)
+		(pin "2"
+			(uuid "c3c7715d-32d0-4422-a1a0-a34a6fb07ee6")
+		)
+		(instances
+			(project "ddc112-shield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 119.38 181.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2393e51-bbcf-4b0f-b720-a7829b6339ac")
+		(property "Reference" "R6"
+			(at 117.602 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 122.174 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.634 180.594 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 119.38 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d6551421-e0d6-4fdd-a971-48581a0736f0")
+		)
+		(pin "2"
+			(uuid "702a284e-561f-4a57-99db-7f2a280a7783")
+		)
+		(instances
+			(project "ddc112-shield"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "R6")
 					(unit 1)
 				)
 			)
