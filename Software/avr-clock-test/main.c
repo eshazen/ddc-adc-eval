@@ -59,6 +59,7 @@ int main (void)
     case 'H':
       puts_P( PSTR("L d   - set LED"));
       puts_P( PSTR("T n   - start timer 0 with wrap=n"));
+      puts_P( PSTR("R     - reset timers"));
       break;
 
     case 'L':
@@ -74,6 +75,10 @@ int main (void)
 
     case 'T':
       init_timers( iargv[1]);
+      break;
+
+    case 'R':
+      reset_timers();
       break;
 
     default:
