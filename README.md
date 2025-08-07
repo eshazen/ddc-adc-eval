@@ -12,3 +12,10 @@ Evaluation board for DDC112 ADC (Arduino UNO shield?)
   <br>can also switch based on T(INT): space between CONV edges > 4794 clocks
   (600uS at 8MHz clock)
 * Data ready at ~526uS at 8MHz
+
+## To do
+
+* Think about grounding at VRs
+* GND areas on back?
+* Add LEDs
+* Stacking header P/Ns
