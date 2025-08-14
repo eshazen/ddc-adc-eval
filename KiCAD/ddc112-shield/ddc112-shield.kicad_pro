@@ -603,6 +603,30 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DigikeyNumber",
+          "name": "DigikeyNumber",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "ManufacturerNumber",
+          "name": "ManufacturerNumber",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "MouserNumber",
+          "name": "MouserNumber",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -669,6 +693,10 @@
     [
       "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
       "Root"
+    ],
+    [
+      "85a88638-d0c9-4ca3-93c4-2444fc65b8fa",
+      "LED_driver"
     ]
   ],
   "text_variables": {}
