@@ -15,6 +15,9 @@ Evaluation board for DDC112 ADC (Arduino UNO shield?)
 
 ## To do
 
+* Add analog switches for 3 LEDs.  Candidates:
+  <br>ADG728 (not in stock, TSSOP)
+  <br>LTC1380 (I2C) from ChatGPT!
 * Think about grounding at VRs
 * GND areas on back?
 * Add LEDs

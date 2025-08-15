@@ -1,4 +1,6 @@
 (sym_lib_table
   (version 7)
   (lib (name "my_DDC")(type "KiCad")(uri "${KIPRJMOD}/my_DDC.kicad_sym")(options "")(descr ""))
+  (lib (name "my_LTC1380")(type "KiCad")(uri "${KIPRJMOD}/my_LTC1380.kicad_sym")(options "")(descr ""))
+  (lib (name "my_LTC2631")(type "KiCad")(uri "${KIPRJMOD}/my_LTC2631.kicad_sym")(options "")(descr ""))
 )
