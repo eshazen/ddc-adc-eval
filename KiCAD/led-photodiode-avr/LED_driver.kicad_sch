@@ -2966,7 +2966,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" ""
+		(property "DigikeyNumber" "541-1.00KCCT-ND"
 			(at 123.19 130.81 0)
 			(effects
 				(font
@@ -2975,7 +2975,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" ""
+		(property "ManufacturerNumber" "CRCW08051K00FKEA"
 			(at 123.19 130.81 0)
 			(effects
 				(font
@@ -3061,7 +3061,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" ""
+		(property "DigikeyNumber" "541-1.00KCCT-ND"
 			(at 130.81 57.15 0)
 			(effects
 				(font
@@ -3070,7 +3070,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" ""
+		(property "ManufacturerNumber" "CRCW08051K00FKEA"
 			(at 130.81 57.15 0)
 			(effects
 				(font
@@ -3122,7 +3122,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Value" "25"
+		(property "Value" "24.9"
 			(at 229.362 137.16 0)
 			(effects
 				(font
@@ -3158,7 +3158,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" ""
+		(property "DigikeyNumber" "541-CRCW120624R9FKEAHPCT-ND"
 			(at 226.06 137.16 0)
 			(effects
 				(font
@@ -3167,7 +3167,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" ""
+		(property "ManufacturerNumber" "CRCW120624R9FKEAHP"
 			(at 226.06 137.16 0)
 			(effects
 				(font
@@ -3355,6 +3355,15 @@
 			)
 		)
 		(property "DigikeyNumber" "505-LTC1380CS#PBF-ND"
+			(at 147.32 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "LTC1380CS#PBF"
 			(at 147.32 57.15 0)
 			(effects
 				(font
@@ -3735,7 +3744,7 @@
 				)
 			)
 		)
-		(property "Value" "440"
+		(property "Value" "442"
 			(at 83.5914 60.7568 90)
 			(effects
 				(font
@@ -3770,7 +3779,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" ""
+		(property "DigikeyNumber" "311-442CRCT-ND"
 			(at 81.28 59.69 0)
 			(effects
 				(font
@@ -3779,7 +3788,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" ""
+		(property "ManufacturerNumber" "RC0805FR-07442RL"
 			(at 81.28 59.69 0)
 			(effects
 				(font
@@ -4952,6 +4961,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "296-46162-1-ND"
+			(at 113.03 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "OPA365AIDR"
+			(at 113.03 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "b00505a9-8fac-4173-bc8f-5249d9d94cd0")
 		)
@@ -5137,7 +5164,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" ""
+		(property "DigikeyNumber" "541-1.00KCCT-ND"
 			(at 74.93 54.61 0)
 			(effects
 				(font
@@ -5146,7 +5173,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" ""
+		(property "ManufacturerNumber" "CRCW08051K00FKEA"
 			(at 74.93 54.61 0)
 			(effects
 				(font

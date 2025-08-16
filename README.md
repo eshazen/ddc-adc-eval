@@ -16,8 +16,5 @@ Evaluation board for DDC112 ADC (Arduino UNO shield?)
 ## To do
 
 * Check all FP (especially screw terminal)
-* Add analog switches for 3 LEDs.  Candidates:
 * Think about grounding at VRs
 * GND areas on back?
-* (Add LEDs)
-* Stacking header P/Ns
