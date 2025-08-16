@@ -8106,6 +8106,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "1276-1123-1-ND"
+			(at 121.92 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "CL21B334KBFNNNE"
+			(at 121.92 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "496aedfe-31d7-4a11-bf9d-e4e28471c03a")
 		)
@@ -8469,6 +8487,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 24.13 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
+			(at 24.13 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a792d142-625f-4d4a-b978-42822ae3f5c4")
 		)
@@ -8605,6 +8641,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 233.68 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
+			(at 233.68 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "583b5c97-a1eb-4c8f-9121-fb5deb17024a")
 		)
@@ -8667,6 +8721,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 215.9 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "1292-0805X106K250CT-ND"
+			(at 215.9 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "0805X106K250CT"
 			(at 215.9 49.53 0)
 			(effects
 				(font
@@ -9223,6 +9295,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 215.9 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "1292-0805X106K250CT-ND"
+			(at 215.9 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "0805X106K250CT"
 			(at 215.9 76.2 0)
 			(effects
 				(font
@@ -9961,6 +10051,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 196.85 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
+			(at 196.85 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3882b636-bb05-4836-9a8c-f8c074352efe")
 		)
@@ -10154,6 +10262,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 241.3 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 241.3 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
 			(at 241.3 77.47 0)
 			(effects
 				(font
@@ -10438,6 +10564,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 143.51 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
+			(at 143.51 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9f0d2f5a-7796-4355-92ec-7fb0756206ee")
 		)
@@ -10460,7 +10604,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "56e51ca7-b8f5-4838-99fe-d3e0755af4bd")
 		(property "Reference" "C19"
 			(at 161.29 93.9799 0)
@@ -11161,7 +11305,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "880097c8-2c77-4d08-a2f9-f5899ffc2ca9")
 		(property "Reference" "C20"
 			(at 161.29 119.3799 0)
@@ -12180,6 +12324,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 219.71 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
+			(at 219.71 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "10624ac1-cffd-4a46-b5bb-528333e1835b")
 		)
@@ -12242,6 +12404,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 143.51 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 143.51 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
 			(at 143.51 189.23 0)
 			(effects
 				(font
@@ -12330,6 +12510,24 @@
 			)
 		)
 		(property "MfgNo" "CC0603KRX7R7BB104"
+			(at 106.68 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 106.68 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
 			(at 106.68 63.5 0)
 			(effects
 				(font
@@ -12538,6 +12736,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "A98076-ND"
+			(at 96.52 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "282836-2"
+			(at 96.52 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c854f09a-c6e3-4d8e-bbf9-81430ff08376")
 		)
@@ -12618,6 +12834,24 @@
 			)
 		)
 		(property "MfgNo" "CL10B105KO8NNNC"
+			(at 33.02 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "1276-1029-1-ND"
+			(at 33.02 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "CL21B105KBFNNNE"
 			(at 33.02 40.64 0)
 			(effects
 				(font
@@ -12732,7 +12966,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.47uF"
+		(property "Value" "0.33uF"
 			(at 181.61 36.8362 0)
 			(effects
 				(font
@@ -12760,6 +12994,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 184.15 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "1276-1123-1-ND"
+			(at 184.15 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "CL21B334KBFNNNE"
 			(at 184.15 35.56 0)
 			(effects
 				(font
@@ -12904,6 +13156,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "1276-1123-1-ND"
+			(at 121.92 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "CL21B334KBFNNNE"
+			(at 121.92 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "06b06c0f-4f3f-4851-b835-d9b9be2b2a63")
 		)
@@ -12966,6 +13236,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 237.49 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "1292-0805X106K250CT-ND"
+			(at 237.49 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "0805X106K250CT"
 			(at 237.49 77.47 0)
 			(effects
 				(font
@@ -13131,6 +13419,24 @@
 			)
 		)
 		(property "CatNo" ""
+			(at 57.15 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "1516-QBLP631-R3ACT-ND"
+			(at 57.15 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "QBLP631-R3A"
 			(at 57.15 151.13 90)
 			(effects
 				(font
@@ -13332,6 +13638,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 193.04 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "1292-0805X106K250CT-ND"
+			(at 193.04 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "0805X106K250CT"
 			(at 193.04 76.2 0)
 			(effects
 				(font
@@ -13622,6 +13946,24 @@
 				(hide yes)
 			)
 		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 53.34 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
+			(at 53.34 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d1ce15fb-0de9-44a8-a15a-72e84d7ae6d9")
 		)
@@ -13814,6 +14156,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 219.71 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 219.71 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
 			(at 219.71 76.2 0)
 			(effects
 				(font

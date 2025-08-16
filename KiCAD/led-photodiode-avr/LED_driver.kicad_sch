@@ -4097,7 +4097,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" ""
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
 			(at 118.11 45.72 0)
 			(effects
 				(font
@@ -4106,7 +4106,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" ""
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
 			(at 118.11 45.72 0)
 			(effects
 				(font
@@ -4324,7 +4324,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" ""
+		(property "DigikeyNumber" "399-C0805C102J5GACTUCT-ND"
 			(at 90.17 59.69 0)
 			(effects
 				(font
@@ -4333,7 +4333,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" ""
+		(property "ManufacturerNumber" "C0805C102J5GACTU"
 			(at 90.17 59.69 0)
 			(effects
 				(font
@@ -4532,7 +4532,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" "1276-1005-1-ND"
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
 			(at 167.64 43.18 0)
 			(effects
 				(font
@@ -4541,7 +4541,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" "CL10B104KO8NNNC"
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
 			(at 167.64 43.18 0)
 			(effects
 				(font
@@ -4629,7 +4629,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" "1276-2048-1-ND"
+		(property "DigikeyNumber" "1276-1123-1-ND"
 			(at 26.67 59.69 0)
 			(effects
 				(font
@@ -4638,7 +4638,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" "CL10B334KO8NNNC"
+		(property "ManufacturerNumber" "CL21B334KBFNNNE"
 			(at 26.67 59.69 0)
 			(effects
 				(font
@@ -4791,7 +4791,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" ""
+		(property "DigikeyNumber" "399-C0805C121J3GACTUCT-ND"
 			(at 110.49 78.74 0)
 			(effects
 				(font
@@ -4800,7 +4800,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" ""
+		(property "ManufacturerNumber" "C0805C121J3GACTU"
 			(at 110.49 78.74 0)
 			(effects
 				(font
@@ -5233,7 +5233,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" "1276-1005-1-ND"
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
 			(at 59.69 35.56 0)
 			(effects
 				(font
@@ -5242,7 +5242,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" "CL10B104KO8NNNC"
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
 			(at 59.69 35.56 0)
 			(effects
 				(font

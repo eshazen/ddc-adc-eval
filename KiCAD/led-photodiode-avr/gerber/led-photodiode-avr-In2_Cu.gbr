@@ -1,0 +1,121 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,9.0.3-9.0.3-0~ubuntu24.04.1*%
+%TF.CreationDate,2025-08-16T11:08:08-04:00*%
+%TF.ProjectId,led-photodiode-avr,6c65642d-7068-46f7-946f-64696f64652d,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L3,Inr*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 9.0.3-9.0.3-0~ubuntu24.04.1) date 2025-08-16 11:08:08*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+G04 Aperture macros list*
+%AMRoundRect*
+0 Rectangle with rounded corners*
+0 $1 Rounding radius*
+0 $2 $3 $4 $5 $6 $7 $8 $9 X,Y pos of 4 corners*
+0 Add a 4 corners polygon primitive as box body*
+4,1,4,$2,$3,$4,$5,$6,$7,$8,$9,$2,$3,0*
+0 Add four circle primitives for the rounded corners*
+1,1,$1+$1,$2,$3*
+1,1,$1+$1,$4,$5*
+1,1,$1+$1,$6,$7*
+1,1,$1+$1,$8,$9*
+0 Add four rect primitives between the rounded corners*
+20,1,$1+$1,$2,$3,$4,$5,0*
+20,1,$1+$1,$4,$5,$6,$7,0*
+20,1,$1+$1,$6,$7,$8,$9,0*
+20,1,$1+$1,$8,$9,$2,$3,0*%
+G04 Aperture macros list end*
+%TA.AperFunction,ComponentPad*%
+%ADD10R,1.700000X1.700000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD11C,1.700000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD12RoundRect,0.250001X1.149999X-1.149999X1.149999X1.149999X-1.149999X1.149999X-1.149999X-1.149999X0*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD13C,2.800000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.N,GND*%
+%TO.C,J4*%
+X133925000Y-78105000D03*
+D11*
+%TO.N,unconnected-(J4-Pin_2-Pad2)*%
+X133925000Y-75565000D03*
+%TO.N,Net-(J4-Pin_3)*%
+X133925000Y-73025000D03*
+%TO.N,/RXD*%
+X133925000Y-70485000D03*
+%TO.N,/TXD*%
+X133925000Y-67945000D03*
+%TO.N,unconnected-(J4-Pin_6-Pad6)*%
+X133925000Y-65405000D03*
+%TD*%
+D12*
+%TO.N,VBUS*%
+%TO.C,J1*%
+X127602500Y-91785000D03*
+D13*
+%TO.N,GND*%
+X127602500Y-86785000D03*
+%TD*%
+D10*
+%TO.N,/MISO*%
+%TO.C,J3*%
+X139065000Y-71125000D03*
+D11*
+%TO.N,VCC*%
+X139065000Y-68585000D03*
+%TO.N,/SCK*%
+X141605000Y-71125000D03*
+%TO.N,/MOSI*%
+X141605000Y-68585000D03*
+%TO.N,/~{RESET}*%
+X144145000Y-71125000D03*
+%TO.N,GND*%
+X144145000Y-68585000D03*
+%TD*%
+D10*
+%TO.N,/LED_driver/LED_1*%
+%TO.C,J2*%
+X176280000Y-96000000D03*
+D11*
+%TO.N,Net-(J2-Pin_2)*%
+X176280000Y-98540000D03*
+%TO.N,/LED_driver/LED_K*%
+X173740000Y-96000000D03*
+%TO.N,Earth*%
+X173740000Y-98540000D03*
+%TO.N,/LED_driver/LED_2*%
+X171200000Y-96000000D03*
+%TO.N,unconnected-(J2-Pin_6-Pad6)*%
+X171200000Y-98540000D03*
+%TO.N,/LED_driver/LED_K*%
+X168660000Y-96000000D03*
+%TO.N,unconnected-(J2-Pin_8-Pad8)*%
+X168660000Y-98540000D03*
+%TO.N,/LED_driver/LED_3*%
+X166120000Y-96000000D03*
+%TO.N,unconnected-(J2-Pin_10-Pad10)*%
+X166120000Y-98540000D03*
+%TO.N,/LED_driver/LED_K*%
+X163580000Y-96000000D03*
+%TO.N,unconnected-(J2-Pin_12-Pad12)*%
+X163580000Y-98540000D03*
+%TO.N,unconnected-(J2-Pin_13-Pad13)*%
+X161040000Y-96000000D03*
+%TO.N,Earth*%
+X161040000Y-98540000D03*
+%TO.N,unconnected-(J2-Pin_15-Pad15)*%
+X158500000Y-96000000D03*
+%TO.N,Net-(J2-Pin_16)*%
+X158500000Y-98540000D03*
+%TD*%
+M02*
