@@ -1,0 +1,132 @@
+(footprint "PDB-C609-2"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 2.032 -8.128 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "53c009e9-1dbb-42c6-8cd3-1ae237140996")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "PDB-C609-2"
+		(at 5.334 3.048 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c8ba7652-bfec-458e-8f32-a92aa6114bfd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7f838300-40b0-4274-87f4-a1a3656e6870")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b2f63f77-5e8c-40c5-a143-721df26fd086")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start 0 -7.239)
+		(end 7.239 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "bb3f9c0a-ab88-4e23-aefb-4322a8548357")
+	)
+	(fp_rect
+		(start 0 -7.366)
+		(end 10.414 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "4422436a-94d0-4baa-837a-ebb0573d4166")
+	)
+	(fp_text user "K"
+		(at 7.112 -0.254 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "f6fe2499-bdf0-480a-bb7e-fbe16b2865fe")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1778)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 5.588 1.27 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "0cfc00ff-66d0-4adc-bc98-51b073bf1a5c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 9.398 -1.016)
+		(size 1.5748 1.5748)
+		(drill 0.889)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0d84f4ed-89e0-4ba8-843a-23266e47a188")
+	)
+	(pad "2" thru_hole circle
+		(at 9.398 -6.35)
+		(size 1.5748 1.5748)
+		(drill 0.889)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "7907cacb-6011-490e-a938-a87c983da76f")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/Photodiode.step"
+		(offset
+			(xyz 3 -7.5 1.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)
