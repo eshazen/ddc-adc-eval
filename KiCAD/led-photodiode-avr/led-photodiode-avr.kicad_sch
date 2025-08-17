@@ -5563,6 +5563,16 @@
 		)
 		(uuid "2a6dbbe5-1489-4590-8150-4e011627542c")
 	)
+	(text "1.0"
+		(exclude_from_sim no)
+		(at 254.254 199.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "344b66ef-59e5-4ef0-b666-39d377e1ea40")
+	)
 	(text "VREF per datasheet"
 		(exclude_from_sim no)
 		(at 175.768 24.892 0)
@@ -5614,7 +5624,7 @@
 		)
 		(uuid "dc458ad8-a495-41b9-926c-e839f38c353a")
 	)
-	(text "Photodiode ADC (DDC112)\nEvaluation board\n(Arduino shield)"
+	(text "Photodiode ADC (DDC112)\nEvaluation board\n"
 		(exclude_from_sim no)
 		(at 163.322 182.372 0)
 		(effects
