@@ -8489,7 +8489,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_IDC:IDC-Header_2x03_P2.54mm_Horizontal"
 			(at 121.92 38.1 90)
 			(effects
 				(font
@@ -8534,7 +8534,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" "1849-PR20203VBDN-ND"
+		(property "DigikeyNumber" "952-2092-ND"
 			(at 128.27 39.37 0)
 			(effects
 				(font
@@ -8543,7 +8543,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" "PR20203VBDN"
+		(property "ManufacturerNumber" "M20-9950345"
 			(at 128.27 39.37 0)
 			(effects
 				(font

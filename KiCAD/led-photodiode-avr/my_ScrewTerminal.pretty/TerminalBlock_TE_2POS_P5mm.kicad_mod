@@ -441,15 +441,15 @@
 		(uuid "fc931115-03b9-463a-a7e4-88effac09546")
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/TerminalBlock.3dshapes/TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm.step"
+	(model "${KIPRJMOD}/models/282836-2.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz 2.5 4 5)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 0)
+			(xyz -90 -0 -180)
 		)
 	)
 )
