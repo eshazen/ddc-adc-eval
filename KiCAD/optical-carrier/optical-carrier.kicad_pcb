@@ -38,7 +38,7 @@
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
 		(pcbplotparams
-			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(layerselection 0x00000000_00000000_55555555_575555ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -72,9 +72,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "gerber/")
 		)
 	)
 	(net 0 "")
@@ -1905,7 +1905,7 @@
 		(layer "Edge.Cuts")
 		(uuid "1e7f637d-7871-431a-9057-4cf3966e5996")
 	)
-	(gr_text "SCOS Wearable\nLED / Phototdiode test carrier\nV1.0 - 2025-08"
+	(gr_text "NIR Wearable\nLED / Phototdiode test carrier\nV1.0 - 2025-08"
 		(at 184.3024 75.3618 0)
 		(layer "F.SilkS")
 		(uuid "e2c4a0cc-cea6-44f0-961b-e54fcace73d8")
