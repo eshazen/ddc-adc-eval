@@ -59,9 +59,9 @@ RFUSEOPT = -U hfuse:r:-:h -U lfuse:r:-:h -U efuse:r:-:h
 
 AVRDUDE  = avrdude $(DUDEPORT) -p $(DUDEMCU) -y -u 
 
-objects = main.o uart.o parse.o timer.o
+objects = main.o uart.o parse.o timer.o ddc.o
 
-headers = parse.h uart.h timer.h
+headers = parse.h uart.h timer.h ddc.h
 
 all: $(objects)  main.hex list
 

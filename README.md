@@ -11,10 +11,9 @@ Evaluation board for DDC112 ADC (Arduino UNO shield?)
 * Mode (Cont vs Ncont) selected by state of CONT pin at power-up
   <br>can also switch based on T(INT): space between CONV edges > 4794 clocks
   (600uS at 8MHz clock)
-* Data ready at ~526uS at 8MHz
+* Data ready at ~526uS at 8MHz (4208 clocks)
 
-## To do
+## Readout strategy
 
-* Check all FP (especially screw terminal)
-* Think about grounding at VRs
-* GND areas on back?
+* Readout function takes ~32us for 20 bits
+* So maybe use CONV period of 558 + 10us (568us or 4544 clocks - 9088 period)

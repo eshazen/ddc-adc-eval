@@ -1,5 +1,11 @@
-# Blinky
+# avr-clock-test
 
-This blinks the LED on an arduino board at 1Hz
-(assuming the clock is set to 8MHz)
+Test AVR clocking of DDC112 using the following pins:
+
+```
+PD6 (OC0A) - clock (8MHz)
+PB1 (OC1A) - conv  (4MHz)
+```
+
+
 
