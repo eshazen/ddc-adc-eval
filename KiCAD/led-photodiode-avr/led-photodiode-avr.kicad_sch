@@ -5573,6 +5573,16 @@
 		)
 		(uuid "344b66ef-59e5-4ef0-b666-39d377e1ea40")
 	)
+	(text "GP LED"
+		(exclude_from_sim no)
+		(at 59.69 139.7 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+		)
+		(uuid "549155ac-166b-4533-84de-1eaf2b761aaa")
+	)
 	(text "VREF per datasheet"
 		(exclude_from_sim no)
 		(at 175.768 24.892 0)
@@ -5596,7 +5606,7 @@
 	)
 	(text "GP LED"
 		(exclude_from_sim no)
-		(at 102.87 143.51 0)
+		(at 102.87 139.7 0)
 		(effects
 			(font
 				(size 1.905 1.905)
@@ -6219,6 +6229,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 147.32) (xy 68.58 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24a675d5-fe25-4c96-a561-37ffefec7ecd")
+	)
+	(wire
+		(pts
 			(xy 53.34 161.29) (xy 53.34 163.83)
 		)
 		(stroke
@@ -6739,6 +6759,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 143.51) (xy 60.96 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76695f84-b1ce-40b4-8414-1d8733727b81")
+	)
+	(wire
+		(pts
 			(xy 53.34 168.91) (xy 53.34 170.18)
 		)
 		(stroke
@@ -6749,7 +6779,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 147.32) (xy 88.9 147.32)
+			(xy 81.28 143.51) (xy 88.9 143.51)
 		)
 		(stroke
 			(width 0)
@@ -7129,6 +7159,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 143.51) (xy 45.72 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0890a13-1d59-4d71-92f5-0225a8601c89")
+	)
+	(wire
+		(pts
 			(xy 237.49 74.93) (xy 237.49 73.66)
 		)
 		(stroke
@@ -7269,7 +7309,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 151.13) (xy 111.76 147.32)
+			(xy 111.76 147.32) (xy 111.76 143.51)
 		)
 		(stroke
 			(width 0)
@@ -7289,7 +7329,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 147.32) (xy 104.14 147.32)
+			(xy 111.76 143.51) (xy 104.14 143.51)
 		)
 		(stroke
 			(width 0)
@@ -7837,6 +7877,16 @@
 		)
 		(uuid "31cdea79-ae9e-4c7c-a732-24ed6565323a")
 	)
+	(label "GP_LED2"
+		(at 62.23 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "33a316ba-3f98-4f1d-9413-7aeb735a12b2")
+	)
 	(label "RXD"
 		(at 90.17 35.56 0)
 		(effects
@@ -7898,7 +7948,7 @@
 		(uuid "57bc12d4-0cd9-470a-9385-000a65ffdc46")
 	)
 	(label "GP_LED"
-		(at 81.28 147.32 0)
+		(at 81.28 143.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8037,6 +8087,16 @@
 		)
 		(uuid "b20e498b-de31-4a58-b02b-0bca9d36bc2a")
 	)
+	(label "GP_LED2"
+		(at 38.1 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf71d8ab-41f9-46c7-97e3-1a20388bff3c")
+	)
 	(label "PC1{slash}ADC1"
 		(at 71.12 80.01 180)
 		(effects
@@ -8107,6 +8167,16 @@
 		)
 		(uuid "eda1a299-7e6b-4d26-bd7d-306fa3e65b9b")
 	)
+	(label "SS{slash}DONT_USE"
+		(at 60.96 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f1d5f95c-3d27-4c4c-bb22-487d5e8066f5")
+	)
 	(label "MOSI"
 		(at 139.7 36.83 0)
 		(effects
@@ -8139,7 +8209,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 92.71 147.32 90)
+		(at 92.71 143.51 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8149,7 +8219,7 @@
 		(fields_autoplaced yes)
 		(uuid "0164c79f-165b-4198-8ac0-800b10919637")
 		(property "Reference" "R47"
-			(at 91.4399 149.86 0)
+			(at 91.4399 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8158,7 +8228,7 @@
 			)
 		)
 		(property "Value" "1.5k"
-			(at 93.9799 149.86 0)
+			(at 93.9799 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8167,7 +8237,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 92.964 148.336 90)
+			(at 92.964 144.526 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8176,7 +8246,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
-			(at 92.71 147.32 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8185,7 +8255,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 92.71 147.32 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8194,7 +8264,7 @@
 			)
 		)
 		(property "MfgNo" "RT0603BRD071K5L"
-			(at 92.71 147.32 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8203,7 +8273,7 @@
 			)
 		)
 		(property "CatNo" "YAG1570CT-ND"
-			(at 92.71 147.32 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8212,7 +8282,7 @@
 			)
 		)
 		(property "DigikeyNumber" "541-4161-1-ND"
-			(at 92.71 147.32 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8221,7 +8291,7 @@
 			)
 		)
 		(property "ManufacturerNumber" "CRCW08051K50FKEAC"
-			(at 92.71 147.32 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11615,7 +11685,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 111.76 151.13 0)
+		(at 111.76 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11624,7 +11694,7 @@
 		(fields_autoplaced yes)
 		(uuid "5f8c20ba-a40e-46d5-9118-27d4e5c87278")
 		(property "Reference" "#PWR096"
-			(at 111.76 157.48 0)
+			(at 111.76 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11633,7 +11703,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 114.3 152.3999 0)
+			(at 114.3 148.5899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11642,7 +11712,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 151.13 0)
+			(at 111.76 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11651,7 +11721,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 151.13 0)
+			(at 111.76 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11660,7 +11730,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 111.76 151.13 0)
+			(at 111.76 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13948,6 +14018,113 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 49.53 143.51 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bb65970a-1749-4671-94f2-b5653843bfd4")
+		(property "Reference" "R11"
+			(at 48.2599 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1.5k"
+			(at 50.7999 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 49.784 144.526 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
+			(at 49.53 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 49.53 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MfgNo" "RT0603BRD071K5L"
+			(at 49.53 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "CatNo" "YAG1570CT-ND"
+			(at 49.53 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "541-4161-1-ND"
+			(at 49.53 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "CRCW08051K50FKEAC"
+			(at 49.53 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2ff95c77-a716-40e4-87e0-4562496b7c7d")
+		)
+		(pin "1"
+			(uuid "695a7cfa-a874-4487-b1c5-0d12c98d3707")
+		)
+		(instances
+			(project "led-photodiode-avr"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 184.15 35.56 0)
 		(mirror y)
@@ -14030,6 +14207,73 @@
 			(project "ddc112-shield"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 68.58 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bc2dd81f-116a-49e4-b104-4e820f8802f3")
+		(property "Reference" "#PWR050"
+			(at 68.58 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 71.12 148.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 68.58 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e824cf13-3636-416d-9e9e-7ab53b909331")
+		)
+		(instances
+			(project "led-photodiode-avr"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -14386,7 +14630,123 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 100.33 147.32 0)
+		(at 57.15 143.51 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca36cb32-a65f-4eaa-9476-d2c30e664c50")
+		(property "Reference" "D4"
+			(at 57.4674 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 60.0074 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 57.15 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/4237/B19Y1USD-20C000113U1930.pdf"
+			(at 57.15 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 57.15 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 57.15 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MfgNo" ""
+			(at 57.15 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "CatNo" ""
+			(at 57.15 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "1516-QBLP631-R3ACT-ND"
+			(at 57.15 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "QBLP631-R3A"
+			(at 57.15 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "203bd459-4751-487d-b960-aa54007e5036")
+		)
+		(pin "1"
+			(uuid "94a91006-5b27-4f0d-9358-a9990873a442")
+		)
+		(instances
+			(project "led-photodiode-avr"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 143.51 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14396,7 +14756,7 @@
 		(fields_autoplaced yes)
 		(uuid "cb06e325-60f9-49d7-91ec-2bffc5a4b9a1")
 		(property "Reference" "D3"
-			(at 100.6474 151.13 90)
+			(at 100.6474 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14405,7 +14765,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 103.1874 151.13 90)
+			(at 103.1874 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14414,7 +14774,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 100.33 147.32 0)
+			(at 100.33 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14423,7 +14783,7 @@
 			)
 		)
 		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/4237/B19Y1USD-20C000113U1930.pdf"
-			(at 100.33 147.32 0)
+			(at 100.33 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14432,7 +14792,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 100.33 147.32 0)
+			(at 100.33 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14441,7 +14801,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 100.33 147.32 0)
+			(at 100.33 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14450,7 +14810,7 @@
 			)
 		)
 		(property "MfgNo" ""
-			(at 100.33 147.32 90)
+			(at 100.33 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14459,7 +14819,7 @@
 			)
 		)
 		(property "CatNo" ""
-			(at 100.33 147.32 90)
+			(at 100.33 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14468,7 +14828,7 @@
 			)
 		)
 		(property "DigikeyNumber" "1516-QBLP631-R3ACT-ND"
-			(at 100.33 147.32 90)
+			(at 100.33 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14477,7 +14837,7 @@
 			)
 		)
 		(property "ManufacturerNumber" "QBLP631-R3A"
-			(at 100.33 147.32 90)
+			(at 100.33 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
