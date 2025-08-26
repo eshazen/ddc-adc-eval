@@ -12,6 +12,7 @@
 #include "parse.h"
 #include "timer.h"
 #include "ddc.h"
+#include "i2c.h"
 
 // create a file pointer for read/write to USART0
 FILE usart0_str = FDEV_SETUP_STREAM(USART0SendByte, USART0ReceiveByte, _FDEV_SETUP_RW);
@@ -23,10 +24,16 @@ static char* argv[MAXARG];
 static int iargv[MAXARG];
 
 // temp variables
-uint8_t v;
-uint16_t adc;
-uint32_t iv;
-uint32_t tv = 0xdeadbeefL;
+static uint8_t v;
+static uint16_t adc;
+static uint32_t iv;
+
+void chk_err( uint8_t rc) {
+  if( rc) {
+    snprintf( buff, sizeof(buff), "I2C_err: 0x%02x", rc);
+    puts(buff);
+  }
+}
 
 void error() {
   puts_P( PSTR("Error"));
@@ -43,7 +50,7 @@ int main (void)
   DDRC |= _BV(PC3);		/* set spare I/O PC3 as output */
   PORTC |= _BV(PC3);		/* set spare I/O PC3 high */
 
-  ddc_init();
+  //  ddc_init();
 
   SPCR &= ~_BV(SPE);		/* make sure SPI is disabled */
 
@@ -59,14 +66,39 @@ int main (void)
 
     switch( cmd_c) {
     case 'H':
-      puts_P( PSTR("L d   - set LEDs"));
-      puts_P( PSTR("T n   - start timers with CONV period=n"));
-      puts_P( PSTR("V     - read timer1 value"));
-      puts_P( PSTR("X     - reset timers"));
-      puts_P( PSTR("G n   - set integrator range 0-7"));
-      puts_P( PSTR("R     - readout ADC"));
-      puts_P( PSTR("RR    - repeated readout for scope test"));
-      puts_P( PSTR("RV    - read with wait for data valid"));
+      puts_P( PSTR("L d           - set LEDs"));
+      puts_P( PSTR("T n           - start timers with CONV period=n"));
+      puts_P( PSTR("G n           - set integrator range 0-7"));
+      puts_P( PSTR("A             - readout ADC"));
+      puts_P( PSTR("D n           - set DAC"));
+      puts_P( PSTR("M en ch       - set mux en=0/1 ch=0..7"));
+      puts_P( PSTR("---"));
+      puts_P( PSTR("AV            - read without wait for data valid"));
+      puts_P( PSTR("AR            - repeated readout for scope test"));
+      puts_P( PSTR("W t r [d...]  - write I2C"));
+      puts_P( PSTR("V             - read timer1 value"));
+      puts_P( PSTR("X             - reset timers"));
+      break;
+
+    case 'D':
+      set_dac( iargv[1]);
+      break;
+
+    case 'M':
+      set_mux( iargv[1], iargv[2]);
+      break;
+
+    case 'W':			/* I2C write */
+      // iargv[1] = I2C target address
+      // iargv[2] = chip register address
+      // iargv[3..n] = data
+      // copy the register address
+      i2c_adr = iargv[2];
+      // copy the write data, including chip address if present
+      for( int i=2; i<argc; i++)
+	i2c_wdata[i-1] = iargv[i];
+      rc = i2c_io( iargv[1], &i2c_adr, 1, i2c_wdata, argc-2, NULL, 0);
+      chk_err(rc);
       break;
 
     case 'G':
@@ -77,23 +109,18 @@ int main (void)
       }
       break;
 
-    case 'R':
-      switch( cmd_2) {
-      case 'R':
+    case 'A':
+      if( cmd_2 == 'R') {
 	while( !USART0CharacterAvailable()) {
 	  while( TCNT1 < 4208)
 	    ;
 	  iv = read_ddc();
 	}
-	break;
-      case 'V':
+      } else if( cmd_2 != 'V') {
 	wait_for_dvalid();
-
-      default:
-	iv = read_ddc();
-	printf("%ld (0x%lx)\n", iv, iv);
-	break;
       }
+      iv = read_ddc();
+      printf("%ld (0x%lx)\n", iv, iv);
       break;
       
     case 'V':
