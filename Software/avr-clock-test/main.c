@@ -13,10 +13,6 @@
 #include "timer.h"
 #include "ddc.h"
 
-#define LED_DDR DDRB
-#define LED_BIT 5
-#define LED_PORT PORTB
-
 // create a file pointer for read/write to USART0
 FILE usart0_str = FDEV_SETUP_STREAM(USART0SendByte, USART0ReceiveByte, _FDEV_SETUP_RW);
 
@@ -44,9 +40,6 @@ int main (void)
   stdout = &usart0_str;		/* connect UART to stdout */
   stdin = &usart0_str;		/* connect UART to stdin */
 
-  LED_DDR |= _BV(LED_BIT);	/* set LED direction */
-  LED_PORT &= ~(_BV(LED_BIT));
-
   DDRC |= _BV(PC3);		/* set spare I/O PC3 as output */
   PORTC |= _BV(PC3);		/* set spare I/O PC3 high */
 
@@ -66,13 +59,22 @@ int main (void)
 
     switch( cmd_c) {
     case 'H':
-      puts_P( PSTR("L d   - set LED"));
-      puts_P( PSTR("T n   - start timer 0 with wrap=n"));
+      puts_P( PSTR("L d   - set LEDs"));
+      puts_P( PSTR("T n   - start timers with CONV period=n"));
       puts_P( PSTR("V     - read timer1 value"));
       puts_P( PSTR("X     - reset timers"));
+      puts_P( PSTR("G n   - set integrator range 0-7"));
       puts_P( PSTR("R     - readout ADC"));
       puts_P( PSTR("RR    - repeated readout for scope test"));
       puts_P( PSTR("RV    - read with wait for data valid"));
+      break;
+
+    case 'G':
+      if( argc < 2) {
+	error();
+      } else {
+	ddc_range( iargv[1]);
+      }
       break;
 
     case 'R':
@@ -103,10 +105,7 @@ int main (void)
       if( argc < 2) {
 	error();
       } else {
-	if( iargv[1])
-	  LED_PORT |= _BV(LED_BIT);
-	else
-	  LED_PORT &= ~_BV(LED_BIT);
+	ddc_leds( iargv[1]);
       }
       break;
 

@@ -14,6 +14,13 @@ void ddc_init() {
   DCLK_PORT |= _BV(DXMIT_BIT);
   DCLK_PORT &= ~_BV(DCLK_BIT);
   DCLK_PORT &= ~_BV(DIN_BIT);
+
+  // set range as outputs, set to 0
+  RANGE_DDR |= RANGE_MASK;
+  ddc_range(0);
+
+  LED_DDR |= _BV(LED_BIT);	/* set LED direction */
+  LED_PORT &= ~(_BV(LED_BIT));
 }
 
 // read DDC 20 bit data (don't wait for DVALID)
@@ -33,4 +40,17 @@ uint32_t read_ddc() {
   }
   DCLK_PORT |= _BV(DXMIT_BIT);
   return v;
+}
+
+// set range
+void ddc_range(uint8_t r) {
+  RANGE_PORT &= ~RANGE_MASK;
+  RANGE_PORT |= RANGE_MASK & r;
+}
+
+
+// set LED(s)
+void ddc_leds(uint8_t v) {
+  LED_PORT &= ~LED_MASK;
+  LED_PORT |= v & LED_MASK;
 }

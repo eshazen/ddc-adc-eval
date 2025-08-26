@@ -13,17 +13,17 @@ prog=usbtiny
 $(info chip is $(chip))
 $(info programmer is $(prog))
 
-# 328 for arduino, 168 for target
+# 328 for arduino and target board
 ifeq ($(chip),uno)
 MCU = atmega328
 F_OSC = 16000000
-EXTRAOPT = -Wno-discarded-qualifiers
+EXTRAOPT = -Wno-discarded-qualifiers -DUNO_TARGET
 DUDEMCU = m328p
 endif
 
 ifeq ($(chip),avr)
 MCU = atmega328
-F_OSC = 8000000
+F_OSC = 16000000
 EXTRAOPT = -Wno-discarded-qualifiers -DAVR_TARGET
 DUDEMCU = m328p
 endif
