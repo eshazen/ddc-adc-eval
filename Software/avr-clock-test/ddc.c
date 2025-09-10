@@ -19,8 +19,8 @@ void ddc_init() {
   RANGE_DDR |= RANGE_MASK;
   ddc_range(0);
 
-  LED_DDR |= _BV(LED_BIT);	/* set LED direction */
-  LED_PORT &= ~(_BV(LED_BIT));
+  LED_DDR |= LED_MASK;	/* set LED direction */
+  LED_PORT &= ~LED_MASK;
 }
 
 // read DDC 20 bit data (don't wait for DVALID)
@@ -51,6 +51,6 @@ void ddc_range(uint8_t r) {
 
 // set LED(s)
 void ddc_leds(uint8_t v) {
-  LED_PORT &= ~LED_MASK;
-  LED_PORT |= v & LED_MASK;
+  LED_PORT &= ~LED_MASK;	/* LEDs off */
+  LED_PORT |= (v << LED_BIT) & LED_MASK;
 }

@@ -6,7 +6,7 @@
 
 
 #ifdef AVR_TARGET
-// set fixed value for 8MHz AVR @ 9600
+// set fixed value for 16MHz AVR @ 19200
 #define UBRR_VALUE 51
 #else
 // otherwise use calculation for Arduino at 16MHz

@@ -30,7 +30,7 @@
 #define LED_PORT PORTD
 #define LED_DDR DDRB
 #define LED_MASK (_BV(PD2)|_BV(PD3))
-#define LED_BIT PB2
+#define LED_BIT PD2
 #endif
 
 void ddc_init();

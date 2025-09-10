@@ -6,7 +6,7 @@
 #
 
 # options: uno, avr
-chip=uno
+chip=avr
 # options: avrisp2, usbtiny, arduino
 prog=usbtiny
 
@@ -53,6 +53,7 @@ CFLAGS_NOOPT = -g -O0 -mmcu=$(MCU) $(EXTRAOPT) -DF_CPU=$(F_OSC) -I../util -Wl,-u
 LDFLAGS = -Wl,-Map=$(<:.o=.map),--cref -mmcu=$(MCU)
 
 # lfuse default 0x62 write as 0xe2 to disable CLKDIV8
+# lfuse default 0x62 write as 0xe0 to disable CLKDIV8 and set OSC=ext
 FUSEOPT = -U lfuse:w:0xe2:m
 
 RFUSEOPT = -U hfuse:r:-:h -U lfuse:r:-:h -U efuse:r:-:h

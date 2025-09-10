@@ -13,6 +13,7 @@
 #include "timer.h"
 #include "ddc.h"
 #include "i2c.h"
+#include "led.h"
 
 // create a file pointer for read/write to USART0
 FILE usart0_str = FDEV_SETUP_STREAM(USART0SendByte, USART0ReceiveByte, _FDEV_SETUP_RW);
@@ -50,7 +51,10 @@ int main (void)
   DDRC |= _BV(PC3);		/* set spare I/O PC3 as output */
   PORTC |= _BV(PC3);		/* set spare I/O PC3 high */
 
-  //  ddc_init();
+#ifdef AVR_TARGET
+  ddc_init();
+#endif  
+  i2c_init( BDIV);
 
   SPCR &= ~_BV(SPE);		/* make sure SPI is disabled */
 
