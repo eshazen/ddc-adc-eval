@@ -15,6 +15,12 @@
 #define DVALID_PIN PIND
 #define DVALID_BIT PD7
 
+#define TEST_PORT PORTD
+#define TEST_DDR DDRD
+#define TEST_PIN PIND
+#define TEST_BIT PD5
+#define TEST_MASK _BV(TEST_BIT)
+
 #define RANGE_PORT PORTC
 #define RANGE_DDR DDRC
 #define RANGE_MASK 7
@@ -22,8 +28,8 @@
 #ifdef UNO_TARGET
 #define LED_PORT PORTB
 #define LED_DDR DDRB
-#define LED_MASK _BV(PB5)
 #define LED_BIT PB5
+#define LED_MASK _BV(LED_BIT)
 #endif
 
 #ifdef AVR_TARGET
@@ -36,9 +42,10 @@
 void ddc_init();
 void ddc_range(uint8_t r);
 void ddc_leds(uint8_t v);
+int wait_for_dvalid();
 
-#define wait_for_dvalid() {while((DVALID_PIN&_BV(DVALID_BIT)));}
+// #define wait_for_dvalid() {while((DVALID_PIN&_BV(DVALID_BIT)));}
 
-uint32_t read_ddc();
+uint32_t* read_ddc();
 
 #endif

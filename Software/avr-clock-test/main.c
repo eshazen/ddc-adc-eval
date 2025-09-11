@@ -28,6 +28,9 @@ static int iargv[MAXARG];
 static uint8_t v;
 static uint16_t adc;
 static uint32_t iv;
+static uint32_t it;
+static int t_int;
+static uint32_t* pdat;
 
 void chk_err( uint8_t rc) {
   if( rc) {
@@ -74,14 +77,22 @@ int main (void)
       puts_P( PSTR("T n           - start timers with CONV period=n"));
       puts_P( PSTR("G n           - set integrator range 0-7"));
       puts_P( PSTR("A             - readout ADC"));
+      puts_P( PSTR("R             - read ADC repeatedly"));
+      puts_P( PSTR("P             - read ADC and print"));
       puts_P( PSTR("D n           - set DAC"));
       puts_P( PSTR("M en ch       - set mux en=0/1 ch=0..7"));
+      puts_P( PSTR("C n           - enable/disable charge test mode"));
       puts_P( PSTR("---"));
-      puts_P( PSTR("AV            - read without wait for data valid"));
-      puts_P( PSTR("AR            - repeated readout for scope test"));
       puts_P( PSTR("W t r [d...]  - write I2C"));
       puts_P( PSTR("V             - read timer1 value"));
       puts_P( PSTR("X             - reset timers"));
+      break;
+
+    case 'C':
+      if( iargv[1])
+	TEST_PORT |= TEST_MASK;
+      else
+	TEST_PORT &= ~TEST_MASK;
       break;
 
     case 'D':
@@ -113,17 +124,30 @@ int main (void)
       }
       break;
 
-    case 'A':
-      if( cmd_2 == 'R') {
-	while( !USART0CharacterAvailable()) {
-	  while( TCNT1 < 4208)
-	    ;
-	  iv = read_ddc();
-	}
-      } else if( cmd_2 != 'V') {
+    case 'P':
+      while( !USART0CharacterAvailable()) {
 	wait_for_dvalid();
+	it = TCNT1;
+	pdat = read_ddc();
+	v = PINB & 2;
+	if( (t_int++) % 1023 == 0) {
+	  printf("%ld (0x%lx) %ld (0x%lx) %d %d\n", pdat[0], pdat[0], pdat[1], pdat[1], it, v);
+	}
       }
-      iv = read_ddc();
+      break;
+	
+
+    case 'R':
+      while( !USART0CharacterAvailable()) {
+	wait_for_dvalid();
+	read_ddc();
+      }
+      break;
+
+    case 'A':
+      t_int = wait_for_dvalid();
+      printf("%d\n", t_int);
+      pdat = read_ddc();
       printf("%ld (0x%lx)\n", iv, iv);
       break;
       
