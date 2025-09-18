@@ -1,6 +1,7 @@
 # ddc-adc-eval
 
-Evaluation board for DDC112 ADC (Arduino UNO shield?)
+Evaluation board for DDC112 ADC (Arduino UNO shield?).
+See `led-photodiode-avr` design for working board.
 
 ## Notes from DDC112 datasheet:
 
