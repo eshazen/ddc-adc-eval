@@ -32,6 +32,15 @@ static uint32_t it;
 static int t_int;
 static uint32_t* pdat;
 
+// buffer for fast sampling
+static uint32_t fast1[100];
+static uint32_t fast2[100];
+static uint8_t cfast[100];
+#define NFAST (sizeof(fast1)/sizeof(fast1[0]))
+static uint32_t* pf1;
+static uint32_t* pf2;
+static uint8_t* pcf;
+
 void chk_err( uint8_t rc) {
   if( rc) {
     snprintf( buff, sizeof(buff), "I2C_err: 0x%02x", rc);
@@ -82,6 +91,7 @@ int main (void)
       puts_P( PSTR("D n           - set DAC"));
       puts_P( PSTR("M en ch       - set mux en=0/1 ch=0..7"));
       puts_P( PSTR("C n           - enable/disable charge test mode"));
+      puts_P( PSTR("F             - capture fast and display"));
       puts_P( PSTR("---"));
       puts_P( PSTR("W t r [d...]  - write I2C"));
       puts_P( PSTR("V             - read timer1 value"));
@@ -123,6 +133,27 @@ int main (void)
 	ddc_range( iargv[1]);
       }
       break;
+
+    case 'F':			/* fast capture channel 1 only*/
+
+      // loop filling the buffer for scoping, stop and print on any key
+      while( !USART0CharacterAvailable()) {
+	pf1 = fast1;
+	pf2 = fast2;
+	pcf = cfast;
+	for( int i=0; i<NFAST; i++) {
+	  wait_for_dvalid();
+	  pdat = read_ddc();
+	  *pf1++ = pdat[0];
+	  *pf2++ = pdat[1];
+	  *pcf++ = PINB & 2;
+	}
+      }
+      for( int i=0; i<NFAST; i++) {
+	printf("%03d %ld %ld %d\n", i, fast1[i], fast2[i], cfast[i]);
+      }
+      break;
+
 
     case 'P':
       while( !USART0CharacterAvailable()) {

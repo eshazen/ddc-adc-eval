@@ -1,17 +1,27 @@
 # avr-clock-test
 
-Interactive CLI for testing the hardware.  As of now the timer setting, DAC, LED and MUX are working
+Interactive CLI for testing the hardware.
 
     L d           - set LEDs
     T n           - start timers with CONV period=n
     G n           - set integrator range 0-7
     A             - readout ADC
+    R             - read ADC repeatedly
+    P             - read ADC and print
     D n           - set DAC
     M en ch       - set mux en=0/1 ch=0..7
+    C n           - enable/disable charge test mode
+    F             - capture fast and display
     ---
-    AV            - read without wait for data valid
-    AR            - repeated readout for scope test
     W t r [d...]  - write I2C
     V             - read timer1 value
     X             - reset timers
+
+Some notes:
+
+* 'P' captures and displays data at about 1HZ.
+<br>It always captures with the same phase of CONV
+* 'F' captures 100 samples at the max rate continuously
+<br>When any UART rx is seen, it stops and dumps the data
+<br>The last column is the state of CONV (integrator A/B)
 

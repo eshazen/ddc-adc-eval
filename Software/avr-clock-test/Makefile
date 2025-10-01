@@ -54,7 +54,7 @@ LDFLAGS = -Wl,-Map=$(<:.o=.map),--cref -mmcu=$(MCU)
 
 # lfuse default 0x62 write as 0xe2 to disable CLKDIV8
 # lfuse default 0x62 write as 0xe0 to disable CLKDIV8 and set OSC=ext
-FUSEOPT = -U lfuse:w:0xe2:m
+FUSEOPT = -U lfuse:w:0xe0:m
 
 RFUSEOPT = -U hfuse:r:-:h -U lfuse:r:-:h -U efuse:r:-:h
 
@@ -74,6 +74,7 @@ flash: main.hex
 
 list:
 	avr-objdump -h -S main.elf > main.lst
+	avr-size main.elf
 	avr-size --common -x main.elf
 
 $(objects): %.o: %.c $(headers)

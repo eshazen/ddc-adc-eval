@@ -37,8 +37,6 @@ uint32_t* read_ddc() {
   for( int i=0; i<20; i++, p >>= 1) {
     if( DCLK_PIN & _BV(DOUT_BIT))
       v |= p;
-    else
-      v &= ~p;
     // toggle DCLK
     DCLK_PORT |= _BV(DCLK_BIT);
     DCLK_PORT &= ~_BV(DCLK_BIT);
@@ -50,14 +48,12 @@ uint32_t* read_ddc() {
   for( int i=0; i<20; i++, p >>= 1) {
     if( DCLK_PIN & _BV(DOUT_BIT))
       v |= p;
-    else
-      v &= ~p;
     // toggle DCLK
     DCLK_PORT |= _BV(DCLK_BIT);
     DCLK_PORT &= ~_BV(DCLK_BIT);
   }
   res[1] = v;
-  DCLK_PORT |= _BV(DXMIT_BIT);
+  DCLK_PORT |= _BV(DXMIT_BIT);	/* set nDXMIT=1 */
   return res;
 }
 
