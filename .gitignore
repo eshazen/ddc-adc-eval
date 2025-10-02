@@ -38,3 +38,9 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+*.o
+*.lst
+*.map
+*.elf
+*.hex

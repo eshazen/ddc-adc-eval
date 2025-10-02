@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include "ddc.h"
 #include <avr/io.h>
+#include <util/delay.h>
 
 // initialize pin direction and initial state
 void ddc_init() {
@@ -77,4 +78,18 @@ int wait_for_dvalid() {
     ++wtime;
   }
   return wtime;
+}
+
+// wait for nDVALID && CONV == 0, count wait time
+int wait_for_dvalid_conv() {
+  int wt;
+  wt = wait_for_dvalid();
+  if ( DCLK_PIN & _BV(CONV_BIT)) {
+    // pulse DXMIT to reset
+    DCLK_PORT &= ~_BV(DXMIT_BIT);	/* set nDXMIT=0 */
+    DCLK_PORT |= _BV(DXMIT_BIT);	/* set nDXMIT=1 */
+    _delay_us(1);
+    wt = wait_for_dvalid();
+  }
+  return wt;
 }

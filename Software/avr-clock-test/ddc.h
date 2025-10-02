@@ -9,6 +9,7 @@
 #define DIN_BIT PB3
 #define DOUT_BIT PB4
 #define DXMIT_BIT PB0
+#define CONV_BIT PB1
 
 #define DVALID_PORT PORTD
 #define DVALID_DDR DDRD
@@ -34,18 +35,17 @@
 
 #ifdef AVR_TARGET
 #define LED_PORT PORTD
-#define LED_DDR DDRB
+#define LED_DDR DDRD
 #define LED_MASK (_BV(PD2)|_BV(PD3))
 #define LED_BIT PD2
+#define LED2_BIT PD3
 #endif
 
 void ddc_init();
 void ddc_range(uint8_t r);
 void ddc_leds(uint8_t v);
 int wait_for_dvalid();
-
-// #define wait_for_dvalid() {while((DVALID_PIN&_BV(DVALID_BIT)));}
-
+int wait_for_dvalid_conv();
 uint32_t* read_ddc();
 
 #endif

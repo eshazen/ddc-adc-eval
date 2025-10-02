@@ -25,3 +25,14 @@ Some notes:
 <br>When any UART rx is seen, it stops and dumps the data
 <br>The last column is the state of CONV (integrator A/B)
 
+## Enhancements for further testing
+
+Readout rate with T = 10000 should be exactly 1.6kHz.
+
+After discussion with Lina:
+
+New readout mode.  Variable rate from 100Hz to .02Hz.
+Average up to 2^12 samples.
+
+
+

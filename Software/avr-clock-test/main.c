@@ -41,6 +41,11 @@ static uint32_t* pf1;
 static uint32_t* pf2;
 static uint8_t* pcf;
 
+// data for streaming
+static int div;			/* rate divisor */
+static int avg;			/* average count */
+uint32_t sum1, sum2, nsamp;
+
 void chk_err( uint8_t rc) {
   if( rc) {
     snprintf( buff, sizeof(buff), "I2C_err: 0x%02x", rc);
@@ -82,20 +87,18 @@ int main (void)
 
     switch( cmd_c) {
     case 'H':
-      puts_P( PSTR("L d           - set LEDs"));
       puts_P( PSTR("T n           - start timers with CONV period=n"));
       puts_P( PSTR("G n           - set integrator range 0-7"));
-      puts_P( PSTR("A             - readout ADC"));
+      puts_P( PSTR("C n           - enable/disable charge test mode"));
+      puts_P( PSTR("S d a         - stream data at 100/d Hz average a samples"));
+      puts_P( PSTR("L d           - set LEDs"));
       puts_P( PSTR("R             - read ADC repeatedly"));
       puts_P( PSTR("P             - read ADC and print"));
       puts_P( PSTR("D n           - set DAC"));
       puts_P( PSTR("M en ch       - set mux en=0/1 ch=0..7"));
-      puts_P( PSTR("C n           - enable/disable charge test mode"));
       puts_P( PSTR("F             - capture fast and display"));
       puts_P( PSTR("---"));
       puts_P( PSTR("W t r [d...]  - write I2C"));
-      puts_P( PSTR("V             - read timer1 value"));
-      puts_P( PSTR("X             - reset timers"));
       break;
 
     case 'C':
@@ -135,18 +138,20 @@ int main (void)
       break;
 
     case 'F':			/* fast capture channel 1 only*/
-
       // loop filling the buffer for scoping, stop and print on any key
       while( !USART0CharacterAvailable()) {
 	pf1 = fast1;
 	pf2 = fast2;
 	pcf = cfast;
 	for( int i=0; i<NFAST; i++) {
-	  wait_for_dvalid();
+	  // wait_for_dvalid();      /* both CONV edges */
+	  wait_for_dvalid_conv();    /* only falling CONV edge */
+	  LED_PORT |= _BV(LED2_BIT); /* flag readout cycle */
 	  pdat = read_ddc();
 	  *pf1++ = pdat[0];
 	  *pf2++ = pdat[1];
-	  *pcf++ = PINB & 2;
+	  *pcf++ = DCLK_PIN & _BV(CONV_BIT);
+	  LED_PORT &= ~_BV(LED2_BIT);
 	}
       }
       for( int i=0; i<NFAST; i++) {
@@ -170,23 +175,65 @@ int main (void)
 
     case 'R':
       while( !USART0CharacterAvailable()) {
-	wait_for_dvalid();
+	wait_for_dvalid_conv();
 	read_ddc();
       }
       break;
 
     case 'A':
-      t_int = wait_for_dvalid();
-      printf("%d\n", t_int);
-      pdat = read_ddc();
-      printf("%ld (0x%lx)\n", iv, iv);
+      switch( argc) {
+      case 1:
+	div = 800;
+	avg = 800;
+	break;
+      case 2:
+	div = avg = iargv[1];
+	break;
+      case 3:
+	div = iargv[1];
+	avg = iargv[2];
+	break;
+      default:
+	error();
+      }
+
+      if( avg != div && avg != 1) {
+	puts_P( PSTR("average must be equal to div or 1"));
+	break;
+      }
+
+      nsamp = 0;
+
+      while( !USART0CharacterAvailable()) {
+
+	sum1 = sum2 = 0;
+
+	for( int i=0; i<div; i++) {
+	  //	  printf("%d,%ld,%ld\n", i,sum1,sum2);
+	  //	  printf("%d,0x%08x,0x%08x\n", i,sum1,sum2);
+	  // wait_for_dvalid();      /* both CONV edges */
+	  wait_for_dvalid_conv();    /* only falling CONV edge */
+	  LED_PORT |= LED_MASK;
+	  pdat = read_ddc();
+	  sum1 += pdat[0];
+	  sum2 += pdat[1];
+	  LED_PORT &= ~_BV(LED2_BIT);
+	}
+
+	if( avg == 1) {
+	  printf("%ld,%ld,%ld\n",nsamp,pdat[0],pdat[1]);
+	} else {
+	  sum1 = sum1 / (long)div;
+	  sum2 = sum2 / (long)div;
+	  printf("%ld,%ld,%ld\n",nsamp,sum1,sum2);
+	}
+
+	++nsamp;
+	LED_PORT &= ~_BV(LED_BIT);
+      }
+
       break;
       
-    case 'V':
-      iv = TCNT1;
-      printf("%d\n", iv);
-      break;
-
     case 'L':
       if( argc < 2) {
 	error();
@@ -197,10 +244,6 @@ int main (void)
 
     case 'T':
       init_timers( iargv[1]);
-      break;
-
-    case 'X':
-      reset_timers();
       break;
 
     default:
