@@ -1,0 +1,111 @@
+(footprint "optical_pcb"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "d80f863c-e2d9-471e-8172-19470c5b137e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "optical_pcb"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "01094767-9583-4fd6-ad12-e22d2b9d12ee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f6b96da5-7c0d-40ef-a5a2-51c3da514715")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7cf51152-2c7b-4592-bbef-c8bb6e1fa949")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start 0 0)
+		(end 68.58 80.01)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "d229a432-8e08-4d0e-91a4-73ab529df31d")
+	)
+	(fp_rect
+		(start 0 0)
+		(end 68.58 80.01)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "User.2")
+		(uuid "2d40c25f-f132-41f0-aa5d-c38995327492")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "56e14c25-8fa6-49e3-927e-291fafda36e5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 5.08 5.08)
+		(size 4.572 4.572)
+		(drill 3.175)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1f16da36-acbb-4e33-9407-590496b9211a")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/optical-carrier.wrl"
+		(offset
+			(xyz -169.545 55.88 12.065)
+		)
+		(scale
+			(xyz 0.392 0.392 0.392)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

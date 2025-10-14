@@ -77,6 +77,8 @@ int main (void)
   SPCR &= ~_BV(SPE);		/* make sure SPI is disabled */
 
   puts_P( PSTR("NIR Control 0.2"));
+  puts_P( PSTR("Timing set for 800/1600 sampling"));
+  init_timers( 10000);
 
   while(1) {
     fputs(">", stdout);
@@ -91,7 +93,7 @@ int main (void)
       puts_P( PSTR("T n           - start timers with CONV period=n"));
       puts_P( PSTR("G n           - set integrator range 0-7"));
       puts_P( PSTR("C n           - enable/disable charge test mode"));
-      puts_P( PSTR("S d a         - stream data at 100/d Hz average a samples"));
+      puts_P( PSTR("A d a         - stream data at 100/d Hz average a samples"));
       puts_P( PSTR("L d           - set LEDs"));
       puts_P( PSTR("R             - read ADC repeatedly"));
       puts_P( PSTR("P             - read ADC and print"));

@@ -516,7 +516,7 @@
       "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "led-photodiode-avr.step",
       "svg": "",
       "vrml": ""
     },

@@ -9927,6 +9927,120 @@
 			)
 		)
 	)
+	(footprint "optical_pcb_model:optical_pcb"
+		(layer "F.Cu")
+		(uuid "60a41ec0-f033-43fd-8177-814cc156c00d")
+		(at 116.84 57.15)
+		(property "Reference" "N1"
+			(at 0 -0.5 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "bb5fe6df-e0ce-4c08-9f88-5bb8ec573410")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Value" "Optical_PCB"
+			(at 0 1 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "308e0f3e-d613-440f-bfbd-9b14b98035bc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a45278ce-f032-49cc-b5d2-c9d17e2bd385")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Housing"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cc023a4a-ab1b-4e5c-820f-9fcbb6a81d1f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Enclosure* Housing*")
+		(path "/304f04cd-a434-4424-99e5-34e3154156e6")
+		(sheetname "/")
+		(sheetfile "led-photodiode-avr.kicad_sch")
+		(attr smd)
+		(fp_rect
+			(start 0 0)
+			(end 68.58 80.01)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "ac2869e4-b2bc-4dd8-94c1-71946d1d9a8f")
+		)
+		(fp_rect
+			(start 0 0)
+			(end 68.58 80.01)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "User.2")
+			(uuid "45567d64-1669-4f19-89d6-772f3d54f3e8")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 2.5 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "5f648eec-4359-4b7f-9bda-9f86e3393f1b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 5.08 5.08)
+			(size 4.572 4.572)
+			(drill 3.175)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "9e98fadf-a4b9-4ec2-a331-f05e6447a6e2")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/models/optical-carrier.wrl"
+			(offset
+				(xyz -169.545 55.88 12.065)
+			)
+			(scale
+				(xyz 0.392 0.392 0.392)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+	)
 	(footprint "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "6258a6a8-9488-49dd-8fdf-663774d67477")
@@ -13972,7 +14086,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net 6 "VCC")
-			(pinfunction "REF_SEL")
+			(pinfunction "CA1")
 			(pintype "passive")
 			(uuid "8626b866-1ede-409c-807d-a4ff350bb9ab")
 		)
@@ -20111,6 +20225,44 @@
 	(dimension
 		(type orthogonal)
 		(layer "User.2")
+		(uuid "367f5d3a-d019-41df-a75d-a2600f217ce2")
+		(pts
+			(xy 116.84 57.15) (xy 121.92 62.23)
+		)
+		(height -6.604)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "0.2"
+			(at 119.38 49.396 0)
+			(layer "User.2")
+			(uuid "367f5d3a-d019-41df-a75d-a2600f217ce2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.2")
 		(uuid "8fdff109-71be-4b7b-9156-39a13424ddb5")
 		(pts
 			(xy 180.34 62.23) (xy 180.34 132.08)
@@ -20138,6 +20290,44 @@
 			(at 186.556 97.155 90)
 			(layer "User.2")
 			(uuid "8fdff109-71be-4b7b-9156-39a13424ddb5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.2")
+		(uuid "af5acaf1-fb02-4256-aad0-9da23edf5280")
+		(pts
+			(xy 116.84 57.15) (xy 121.92 62.23)
+		)
+		(height -3.429)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "0.2"
+			(at 112.261 59.69 90)
+			(layer "User.2")
+			(uuid "af5acaf1-fb02-4256-aad0-9da23edf5280")
 			(effects
 				(font
 					(size 1 1)
