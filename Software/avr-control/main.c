@@ -7,6 +7,8 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <ctype.h>
+#include <math.h>
+
 #include <avr/pgmspace.h>
 #include "uart.h"
 #include "parse.h"
@@ -14,6 +16,10 @@
 #include "ddc.h"
 #include "i2c.h"
 #include "led.h"
+#include "avr_adc.h"
+
+// ADC channel for temp sensor
+#define ADC_TEMP 6
 
 // create a file pointer for read/write to USART0
 FILE usart0_str = FDEV_SETUP_STREAM(USART0SendByte, USART0ReceiveByte, _FDEV_SETUP_RW);
@@ -47,6 +53,40 @@ static int avg;			/* average count */
 uint32_t sum1, sum2;
 uint16_t nsamp;
 
+double degC;
+
+// convert ADC value to degrees C assuming thermistor
+// in 10k voltage divider with B25/85 = 3435K
+double adc_to_degC( uint32_t v) {
+  double af = v/1024.0;	/* ADC fraction */
+  double r = af/(1.0-af); /* R(t) / 10k */
+  double lr = log(r);		  /* ln( R(t)/10k) */
+  /* constants for ThorLabs TH10K from datasheet */
+  const double a = 0.003354016;
+  const double b = 0.000256173;
+  const double c = 2.13941e-6;
+  const double d = -7.25325e-8;
+  return (1.0 / (a + b*lr + c*pow(lr,2.0) + d*pow(lr,3.0))) - 273.15;
+}
+
+// format a scaled integer value with 3 fractional digits as xxx.x
+// uses buff
+char* fdec( uint32_t v) {
+  snprintf( buff, sizeof(buff), "%ld", v);
+  size_t s = strlen(buff);
+  buff[s-2] = buff[s-3];
+  buff[s-3] = '.';
+  buff[s-1] = '\0';
+  return buff;
+}
+
+// print a scaled integer value with 3 fractional digits as xxx.x
+// uses buff
+void pdec( uint32_t v) {
+  char *r = fdec( v);
+  fputs( r, stdout);
+}
+
 void chk_err( uint8_t rc) {
   if( rc) {
     snprintf( buff, sizeof(buff), "I2C_err: 0x%02x", rc);
@@ -74,6 +114,8 @@ int main (void)
 #endif  
   i2c_init( BDIV);
 
+  InitADC();
+
   SPCR &= ~_BV(SPE);		/* make sure SPI is disabled */
 
   puts_P( PSTR("NIR Control 0.2"));
@@ -83,10 +125,9 @@ int main (void)
   while(1) {
     fputs(">", stdout);
     USART0GetString( buff, sizeof(buff));
+    char cmd_c = toupper( buff[0]);
+    char cmd_2 = toupper( buff[1]);
     int argc = parse( buff, argv, iargv, sizeof(argv)/sizeof(argv[0]));
-
-    char cmd_c = toupper( *argv[0]);
-    char cmd_2 = toupper( argv[0][1]);
 
     switch( cmd_c) {
     case 'H':
@@ -94,16 +135,31 @@ int main (void)
       puts_P( PSTR("G n           - set integrator range 0-7"));
       puts_P( PSTR("C n           - enable/disable charge test mode"));
       puts_P( PSTR("A d a         - stream data at 100/d Hz average a samples"));
-      puts_P( PSTR("L d           - set LEDs"));
+      puts_P( PSTR("L d           - set GPIO LEDs"));
       puts_P( PSTR("R             - read ADC repeatedly"));
       puts_P( PSTR("P             - read ADC and print"));
-      puts_P( PSTR("D n           - set DAC"));
+      puts_P( PSTR("E             - reat tEmperature"));
+      puts_P( PSTR("D n           - set LED current DAC"));
       puts_P( PSTR("M en ch       - set mux en=0/1 ch=0..7"));
       puts_P( PSTR("F             - capture fast and display"));
       puts_P( PSTR("---"));
       puts_P( PSTR("W t r [d...]  - write I2C"));
       break;
 
+      // read the temperature (or any ADC)
+    case 'E':
+      if( argc < 2)
+	t_int = ADC_TEMP;	/* default ADC channel */
+      else
+	t_int = iargv[1];	/* else command-line choice */
+      adc = ReadADC( t_int);
+      degC = adc_to_degC( adc);
+      pdec( (int)(degC * 1000.0));
+      puts_P( PSTR(" degC"));
+      printf("%d\n", adc);
+      break;
+
+      // enable charge inject (test) mode
     case 'C':
       if( iargv[1])
 	TEST_PORT |= TEST_MASK;
@@ -111,6 +167,7 @@ int main (void)
 	TEST_PORT &= ~TEST_MASK;
       break;
 
+      // set the LED current DAC
     case 'D':
       set_dac( iargv[1]);
       break;
@@ -226,7 +283,14 @@ int main (void)
 	} else {
 	  sum1 = sum1 / (long)div;
 	  sum2 = sum2 / (long)div;
-	  printf("%d,%ld,%ld\n",nsamp,sum1,sum2); /* otherwise print average */
+	  if( cmd_2 == 'T') {			    /* cmd "AT" includes temperature */
+	    adc = ReadADC( ADC_TEMP);
+	    degC = adc_to_degC( adc);
+	    fdec( (int)(degC * 1000.0));
+	    printf("%d,%ld,%ld,%s\n",nsamp,sum1,sum2,buff); /* otherwise print average */
+	  } else {
+	    printf("%d,%ld,%ld\n",nsamp,sum1,sum2); /* otherwise print average */
+	  }
 	}
 
 	++nsamp;
