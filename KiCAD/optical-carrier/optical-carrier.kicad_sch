@@ -997,6 +997,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "REV 2 WORK IN PROGRESS"
+		(exclude_from_sim no)
+		(at 242.062 174.244 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "6049a72c-0a28-4916-9abc-90e50e212a7c")
+	)
 	(wire
 		(pts
 			(xy 100.33 72.39) (xy 120.65 72.39)

@@ -5929,6 +5929,16 @@
 		)
 		(uuid 88775e83-f732-434d-ba11-eb6aa54ab393)
 	)
+	(text "REV 2 WORK IN PROGRESS"
+		(exclude_from_sim no)
+		(at 230.378 179.832 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "11e194f7-c4fb-41d9-bcbd-23788c4c301e")
+	)
 	(text "AVR ISP"
 		(exclude_from_sim no)
 		(at 141.224 18.288 0)
