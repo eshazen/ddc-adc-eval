@@ -69,14 +69,15 @@ double adc_to_degC( uint32_t v) {
   return (1.0 / (a + b*lr + c*pow(lr,2.0) + d*pow(lr,3.0))) - 273.15;
 }
 
-// format a scaled integer value with 3 fractional digits as xxx.x
+// format a scaled integer value with 3 fractional digits as xxx.xx
 // uses buff
 char* fdec( uint32_t v) {
   snprintf( buff, sizeof(buff), "%ld", v);
   size_t s = strlen(buff);
+  buff[s-1] = buff[s-2];
   buff[s-2] = buff[s-3];
   buff[s-3] = '.';
-  buff[s-1] = '\0';
+  buff[s] = '\0';
   return buff;
 }
 
@@ -156,7 +157,6 @@ int main (void)
       degC = adc_to_degC( adc);
       pdec( (int)(degC * 1000.0));
       puts_P( PSTR(" degC"));
-      printf("%d\n", adc);
       break;
 
       // enable charge inject (test) mode

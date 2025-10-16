@@ -34,7 +34,7 @@ ser.reset_input_buffer()
 ser.write( b'c 0\r')
 gset = "g %d\r" % gain
 ser.write( gset.encode("utf-8"))
-ser.write( b'a\r')
+ser.write( b'at\r')
 
 samp = 0
 
@@ -45,7 +45,8 @@ while samp < nsamp:
         samp = int(cols[0])
         ch2 = int(cols[1])
         ch1 = int(cols[2])
-        print( samp, ch1)
+        degc = float(cols[3])
+        print( samp, ch1, degc)
         fp.write( data)
         fp.flush()
         

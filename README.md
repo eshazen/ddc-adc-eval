@@ -18,3 +18,22 @@ See `led-photodiode-avr` design for working board.
 
 * Readout function takes ~32us for 20 bits
 * So maybe use CONV period of 558 + 10us (568us or 4544 clocks - 9088 period)
+
+## Version 2 ECOs
+
+### Main board
+
+* Add transistors, expand to support 8 LEDs
+* Change to common anode configuration (incl connector pinout)
+* Correct external caps on DDC (2 -> 4 C's)
+* Add 12 bit ADC for temperature sensor
+* Testpoints?
+
+### Optical board
+
+* Fix photodiode pinout
+* Add temp sensor next to photodiode on copper pad
+* Add two Marubeni footprints next to D1 and D3
+* Wire 8 LED drivers to the 9 LEDs with a jumper to choose between e.g. D3 and one Marubeni channel.
+* Change to common anode topology
+* 
