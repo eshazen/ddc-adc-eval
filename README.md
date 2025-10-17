@@ -26,8 +26,8 @@ See `led-photodiode-avr` design for working board.
 * [sch] Add transistors, expand to support 8 LEDs
 * [sch] Change to common anode configuration (incl connector pinout)
 * [sch] Correct external caps on DDC (2 -> 4 C's)
-* Add 12 bit ADC for temperature sensor
-* Testpoints?
+* [sch] Add 12 bit ADC for temperature sensor
+* [sch] Testpoints?
 
 ### Optical board
 
