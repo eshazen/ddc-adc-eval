@@ -5978,6 +5978,12 @@
 		(uuid "1bd24cf1-0d5c-41a8-91f2-868bb010c878")
 	)
 	(junction
+		(at 130.81 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "24787a89-911e-452d-a2ec-6fb47bdbbbb9")
+	)
+	(junction
 		(at 191.77 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7083,6 +7089,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 87.63) (xy 130.81 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57a4703f-6fe5-4faf-8a3b-4b6a79146d2d")
+	)
+	(wire
+		(pts
 			(xy 57.15 74.93) (xy 69.85 74.93)
 		)
 		(stroke
@@ -7363,6 +7379,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 87.63) (xy 130.81 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77662909-6430-4601-aa31-4077b725c3f4")
+	)
+	(wire
+		(pts
 			(xy 52.07 29.21) (xy 44.45 29.21)
 		)
 		(stroke
@@ -7513,7 +7539,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 78.74) (xy 130.81 102.87)
+			(xy 130.81 78.74) (xy 130.81 87.63)
 		)
 		(stroke
 			(width 0)
@@ -12471,6 +12497,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 127 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "55f16905-8dcf-4ac2-8c92-b50612471a07")
+		(property "Reference" "#PWR055"
+			(at 127 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 127 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 127 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b5d7fc7-1140-4538-ad52-f336f90f895f")
+		)
+		(instances
+			(project "led-photodiode-avr"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR055")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 163.83 100.33 90)
 		(unit 1)
@@ -12497,7 +12589,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 167.64 99.3648 0)
 			(effects
 				(font
@@ -12686,6 +12778,112 @@
 			(project "led-photodiode-avr"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR096")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 127 91.44 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "62633bdf-9feb-476f-b7e9-0901dece4cfa")
+		(property "Reference" "C27"
+			(at 123.19 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 123.19 92.7099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 126.0348 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 127 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 127 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "CatNo" "311-1088-1-ND"
+			(at 127 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MfgNo" "CC0603KRX7R7BB104"
+			(at 127 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "478-KGM21NR71H104KTCT-ND"
+			(at 127 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "KGM21NR71H104KT"
+			(at 127 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b4e78f8-a630-49ea-ac20-ac53b9795771")
+		)
+		(pin "2"
+			(uuid "59b00e05-0b03-4774-b858-6b4a914f8972")
+		)
+		(instances
+			(project "led-photodiode-avr"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -13523,7 +13721,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 167.64 142.5448 0)
 			(effects
 				(font
@@ -13592,7 +13790,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 167.64 124.7648 0)
 			(effects
 				(font
@@ -14464,7 +14662,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 167.64 113.3348 0)
 			(effects
 				(font

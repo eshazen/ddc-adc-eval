@@ -23,17 +23,17 @@ See `led-photodiode-avr` design for working board.
 
 ### Main board
 
-* [sch] Add transistors, expand to support 8 LEDs
-* [sch] Change to common anode configuration (incl connector pinout)
-* [sch] Correct external caps on DDC (2 -> 4 C's)
-* [sch] Add 12 bit ADC for temperature sensor
-* [sch] Testpoints?
+* [done] Add transistors, expand to support 8 LEDs
+* [done] Change to common anode configuration (incl connector pinout)
+* [done] Correct external caps on DDC (2 -> 4 C's)
+* [done] Add 12 bit ADC for temperature sensor
+* [done] Testpoints?
 
 ### Optical board
 
-* Fix photodiode pinout
-* Add temp sensor next to photodiode on copper pad
-* Add two Marubeni footprints next to D1 and D3
-* Wire 8 LED drivers to the 9 LEDs with a jumper to choose between e.g. D3 and one Marubeni channel.
-* Change to common anode topology
+* [done] Fix photodiode pinout
+* [in progress] Add temp sensor next to photodiode on copper pad
+* [done] Add two Marubeni footprints next to D1 and D3
+* [in progress] Wire 8 LED drivers to the 9 LEDs with a jumper to choose between e.g. D3 and one Marubeni channel.
+* [in progress] Change to common anode topology
 * 

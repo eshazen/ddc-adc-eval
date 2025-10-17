@@ -77,7 +77,7 @@
 		(uuid "4422436a-94d0-4baa-837a-ebb0573d4166")
 	)
 	(fp_text user "K"
-		(at 7.112 -0.254 0)
+		(at 7.239 -5.6 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "f6fe2499-bdf0-480a-bb7e-fbe16b2865fe")
@@ -102,20 +102,20 @@
 		)
 	)
 	(pad "1" thru_hole circle
-		(at 9.398 -1.016)
-		(size 1.5748 1.5748)
-		(drill 0.889)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "0d84f4ed-89e0-4ba8-843a-23266e47a188")
-	)
-	(pad "2" thru_hole circle
 		(at 9.398 -6.35)
 		(size 1.5748 1.5748)
 		(drill 0.889)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "7907cacb-6011-490e-a938-a87c983da76f")
+	)
+	(pad "2" thru_hole circle
+		(at 9.398 -1.016)
+		(size 1.5748 1.5748)
+		(drill 0.889)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0d84f4ed-89e0-4ba8-843a-23266e47a188")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/models/Photodiode.step"
