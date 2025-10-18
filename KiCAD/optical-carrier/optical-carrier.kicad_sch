@@ -2775,7 +2775,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED_GABR"
+		(property "Value" "Marubeni_LED"
 			(at 160.02 109.2199 90)
 			(effects
 				(font
@@ -2793,7 +2793,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://tech-led.com/wp-content/uploads/2019/04/SMT735_810_850-1.pdf"
 			(at 152.4 107.95 0)
 			(effects
 				(font
@@ -2804,6 +2804,15 @@
 		)
 		(property "Description" "RGB LED, green/anode/blue/red"
 			(at 151.13 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MfgNo" "SMT735_810-850"
+			(at 151.13 107.95 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2841,7 +2850,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3081bc7e-f78d-44c1-b576-2b69d3db6315")
 		(property "Reference" "D5"
 			(at 93.98 106.6799 90)
@@ -2852,7 +2860,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED_GABR"
+		(property "Value" "Marubeni_LED"
 			(at 93.98 109.2199 90)
 			(effects
 				(font
@@ -2870,7 +2878,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://tech-led.com/wp-content/uploads/2019/04/SMT735_810_850-1.pdf"
 			(at 86.36 107.95 0)
 			(effects
 				(font
@@ -2886,6 +2894,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "MfgNo" "SMT735_810-850"
+			(at 102.616 112.014 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -3180,7 +3196,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "946e9a99-2331-4e10-805b-cbafe695f471")
 		(property "Reference" "D6"
 			(at 152.4 72.7074 90)
@@ -3192,7 +3207,7 @@
 			)
 		)
 		(property "Value" "PDB-C609-2"
-			(at 152.4 75.2474 90)
+			(at 153.162 75.184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3227,7 +3242,15 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" "PDB-C609-2-ND"
+		(property "CatNo" "PDB-C609-2-ND"
+			(at 157.988 77.724 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfgNo" "PDB-C609-2"
 			(at 147.32 74.93 90)
 			(effects
 				(font
@@ -3259,7 +3282,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a1701e3e-345d-42e0-b021-02cbd5211e12")
 		(property "Reference" "TH1"
 			(at 154.94 52.07 90)
@@ -3269,7 +3291,7 @@
 				)
 			)
 		)
-		(property "Value" "Thermistor"
+		(property "Value" "10K NTC B2585=3435K"
 			(at 154.94 54.61 90)
 			(effects
 				(font
@@ -3286,7 +3308,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://product.tdk.com/en/search/sensor/ntc/chip-ntc-thermistor/info?part_no=NTCG163JX103DT1S"
 			(at 154.94 58.42 0)
 			(effects
 				(font
@@ -3297,6 +3319,23 @@
 		)
 		(property "Description" "Temperature dependent resistor"
 			(at 154.94 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "CatNo" "445-174518-1-ND"
+			(at 155.956 61.976 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MfgNo" "NTCG163JX103DT1S"
+			(at 154.94 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3353,7 +3392,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://specs.marktechopto.com/pdf/products/datasheet/MTE9730CP.pdf"
 			(at 151.13 127 0)
 			(effects
 				(font
@@ -3391,6 +3430,24 @@
 		)
 		(property "ManufacturerNumber" "MTE9730CP"
 			(at 151.13 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "CatNo" "1125-1435-ND"
+			(at 151.13 127 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MfgNo" "MTE9730CP"
+			(at 151.13 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3447,7 +3504,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://specs.marktechopto.com/pdf/products/datasheet/MTE9730CP.pdf"
 			(at 119.38 127 0)
 			(effects
 				(font
@@ -3485,6 +3542,24 @@
 		)
 		(property "ManufacturerNumber" "MTE9730CP"
 			(at 119.38 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "CatNo" "1125-1435-ND"
+			(at 119.38 127 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MfgNo" "MTE9730CP"
+			(at 119.38 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3541,7 +3616,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://specs.marktechopto.com/pdf/products/datasheet/MTE9730CP.pdf"
 			(at 85.09 127 0)
 			(effects
 				(font
@@ -3568,16 +3643,15 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" "1125-1435-ND"
-			(at 85.09 127 0)
+		(property "CatNo" "1125-1435-ND"
+			(at 94.742 132.08 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" "MTE9730CP"
+		(property "MfgNo" "MTE9730CP"
 			(at 85.09 127 0)
 			(effects
 				(font

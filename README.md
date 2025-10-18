@@ -21,6 +21,8 @@ See `led-photodiode-avr` design for working board.
 
 ## Version 2 ECOs
 
+Still need to check/update DigiKey numbers on all parts.
+
 ### Main board
 
 * [done] Add transistors, expand to support 8 LEDs
