@@ -2937,7 +2937,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_DIN965"
 			(at 54.61 170.18 0)
 			(effects
 				(font
@@ -3001,7 +3001,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_DIN965"
 			(at 54.61 175.26 0)
 			(effects
 				(font
@@ -3065,7 +3065,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_DIN965"
 			(at 54.61 160.02 0)
 			(effects
 				(font
@@ -3109,7 +3109,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "6c715f27-8e5a-49a0-8373-62192688de69")
 		(property "Reference" "JP1"
 			(at 191.77 110.49 0)
@@ -3629,7 +3629,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_DIN965"
 			(at 54.61 165.1 0)
 			(effects
 				(font

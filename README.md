@@ -32,8 +32,8 @@ See `led-photodiode-avr` design for working board.
 ### Optical board
 
 * [done] Fix photodiode pinout
-* [in progress] Add temp sensor next to photodiode on copper pad
+* [done] Add temp sensor next to photodiode on copper pad
 * [done] Add two Marubeni footprints next to D1 and D3
-* [in progress] Wire 8 LED drivers to the 9 LEDs with a jumper to choose between e.g. D3 and one Marubeni channel.
-* [in progress] Change to common anode topology
+* [done] Wire 8 LED drivers to the 9 LEDs with a jumper to choose between e.g. D3 and one Marubeni channel.
+* [done] Change to common anode topology
 * 

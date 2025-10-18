@@ -19,11 +19,8 @@ Running now.
 
 T = 9800 works well
 
-
-
 ## ECOs
 
-* External cap wiring incorrect.  For channel 1 two caps are needed,
-on pins (3,4) and (5,6).  Same for channel 2
+Rev 2 layout completed.  See top-level README for change details.
 
 
