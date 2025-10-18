@@ -1860,6 +1860,18 @@
 		(uuid "4ed8bef9-a9da-4e46-8aa0-1c9ae47f620f")
 	)
 	(junction
+		(at 140.97 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad88a682-8b1a-4888-85e1-c0e68ba10225")
+	)
+	(junction
+		(at 140.97 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e48de11d-1d2b-43da-8890-1355a1e0dea7")
+	)
+	(junction
 		(at 138.43 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1877,7 +1889,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 85.09) (xy 167.64 85.09)
+			(xy 133.35 85.09) (xy 140.97 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2077,6 +2089,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 77.47) (xy 140.97 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "533a914f-97b3-4110-8db5-a62bcbd1f24d")
+	)
+	(wire
+		(pts
 			(xy 133.35 72.39) (xy 140.97 72.39)
 		)
 		(stroke
@@ -2244,6 +2266,16 @@
 			(type default)
 		)
 		(uuid "b9d27e66-552f-4616-9daa-21c30053eba7")
+	)
+	(wire
+		(pts
+			(xy 140.97 85.09) (xy 167.64 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bffd998d-b0f2-4a0d-9976-8313c5f97cbc")
 	)
 	(wire
 		(pts
@@ -2445,7 +2477,7 @@
 		)
 		(uuid "0102b588-0a94-4a0a-8cf5-64233295f42f")
 	)
-	(label "LED6"
+	(label "LED3"
 		(at 153.67 93.98 0)
 		(effects
 			(font
@@ -2475,7 +2507,7 @@
 		)
 		(uuid "5637481b-bda5-4bd7-a00d-fde39c347de7")
 	)
-	(label "LED1"
+	(label "LED6"
 		(at 86.36 120.65 0)
 		(effects
 			(font
@@ -2485,7 +2517,7 @@
 		)
 		(uuid "7aabcbe8-45e5-4f42-b132-85a55af07c31")
 	)
-	(label "LED5"
+	(label "LED8"
 		(at 91.44 99.06 0)
 		(effects
 			(font
@@ -2525,7 +2557,7 @@
 		)
 		(uuid "a1b127f2-b66d-4494-8a5e-2039ee9e3809")
 	)
-	(label "LED3"
+	(label "LED7"
 		(at 91.44 93.98 0)
 		(effects
 			(font
@@ -2535,7 +2567,7 @@
 		)
 		(uuid "b67b0c9e-8b14-471e-9aa0-728627cdca1d")
 	)
-	(label "LED4"
+	(label "LED5"
 		(at 91.44 96.52 0)
 		(effects
 			(font
@@ -2545,7 +2577,7 @@
 		)
 		(uuid "ba432e32-1e08-40d5-a62d-5a75ac1b542c")
 	)
-	(label "LED7"
+	(label "LED1"
 		(at 153.67 96.52 0)
 		(effects
 			(font
@@ -2565,7 +2597,7 @@
 		)
 		(uuid "e21faec8-e81f-46bb-9596-39a56852171b")
 	)
-	(label "LED8"
+	(label "LED4"
 		(at 191.77 96.52 0)
 		(effects
 			(font
@@ -2734,7 +2766,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2468c569-5b4c-47cc-8bae-3fb3162ad73a")
-		(property "Reference" "D5"
+		(property "Reference" "D1"
 			(at 160.02 106.6799 90)
 			(effects
 				(font
@@ -2794,7 +2826,7 @@
 		(instances
 			(project "optical-carrier"
 				(path "/d8677e2d-f25e-4f3a-9cba-3944c56fbd40"
-					(reference "D5")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -2811,7 +2843,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3081bc7e-f78d-44c1-b576-2b69d3db6315")
-		(property "Reference" "D1"
+		(property "Reference" "D5"
 			(at 93.98 106.6799 90)
 			(effects
 				(font
@@ -2871,7 +2903,7 @@
 		(instances
 			(project ""
 				(path "/d8677e2d-f25e-4f3a-9cba-3944c56fbd40"
-					(reference "D1")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -3150,7 +3182,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "946e9a99-2331-4e10-805b-cbafe695f471")
-		(property "Reference" "D4"
+		(property "Reference" "D6"
 			(at 152.4 72.7074 90)
 			(effects
 				(font
@@ -3213,7 +3245,7 @@
 		(instances
 			(project ""
 				(path "/d8677e2d-f25e-4f3a-9cba-3944c56fbd40"
-					(reference "D4")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -3296,7 +3328,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a4e4fb9e-46e9-4a54-8a9c-c7624f651696")
-		(property "Reference" "D6"
+		(property "Reference" "D4"
 			(at 154.94 125.984 90)
 			(effects
 				(font
@@ -3375,7 +3407,7 @@
 		(instances
 			(project "optical-carrier"
 				(path "/d8677e2d-f25e-4f3a-9cba-3944c56fbd40"
-					(reference "D6")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -3390,7 +3422,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b776f48a-0bce-4656-8773-736dc7d16e31")
-		(property "Reference" "D3"
+		(property "Reference" "D2"
 			(at 122.936 125.984 90)
 			(effects
 				(font
@@ -3469,7 +3501,7 @@
 		(instances
 			(project ""
 				(path "/d8677e2d-f25e-4f3a-9cba-3944c56fbd40"
-					(reference "D3")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -3484,7 +3516,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bd9ab602-9f4e-4502-a572-b6d6fa6b6cf0")
-		(property "Reference" "D2"
+		(property "Reference" "D3"
 			(at 88.392 126.746 90)
 			(effects
 				(font
@@ -3563,7 +3595,7 @@
 		(instances
 			(project "optical-carrier"
 				(path "/d8677e2d-f25e-4f3a-9cba-3944c56fbd40"
-					(reference "D2")
+					(reference "D3")
 					(unit 1)
 				)
 			)
