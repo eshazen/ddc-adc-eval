@@ -1825,7 +1825,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "REV 2 WORK IN PROGRESS"
+	(text "REV 2.0\n10/19/25"
 		(exclude_from_sim no)
 		(at 242.062 174.244 0)
 		(effects
@@ -2698,6 +2698,24 @@
 				(hide yes)
 			)
 		)
+		(property "CatNo" "S9196-ND"
+			(at 125.73 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MfgNo" "SFH11-PBPC-D08-ST-BK"
+			(at 125.73 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "16"
 			(uuid "9e269a84-f7f9-44df-8d36-deff67369f2a")
 		)
@@ -2763,7 +2781,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2468c569-5b4c-47cc-8bae-3fb3162ad73a")
 		(property "Reference" "D1"
@@ -2849,7 +2867,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "3081bc7e-f78d-44c1-b576-2b69d3db6315")
 		(property "Reference" "D5"
 			(at 93.98 106.6799 90)
@@ -2932,7 +2950,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3e26a2a4-30da-45b7-8c05-dbfe15e3dd61")
 		(property "Reference" "H3"
@@ -2996,7 +3014,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3f556ec6-396e-411b-8cbb-c732776fbf8a")
 		(property "Reference" "H4"
@@ -3060,7 +3078,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "56e844dc-1429-4c28-adfa-b5ae5929615d")
 		(property "Reference" "H1"
@@ -3419,7 +3437,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" "1125-1435-ND"
+		(property "DigikeyNumber" ""
 			(at 151.13 127 0)
 			(effects
 				(font
@@ -3428,7 +3446,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" "MTE9730CP"
+		(property "ManufacturerNumber" ""
 			(at 151.13 127 0)
 			(effects
 				(font
@@ -3531,7 +3549,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyNumber" "1125-1435-ND"
+		(property "DigikeyNumber" ""
 			(at 119.38 127 0)
 			(effects
 				(font
@@ -3540,7 +3558,7 @@
 				(hide yes)
 			)
 		)
-		(property "ManufacturerNumber" "MTE9730CP"
+		(property "ManufacturerNumber" ""
 			(at 119.38 127 0)
 			(effects
 				(font
@@ -3682,7 +3700,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "c5400ac0-f743-45c2-a242-7175adab9d5a")
 		(property "Reference" "H2"

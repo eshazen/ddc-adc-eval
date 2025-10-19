@@ -5823,7 +5823,7 @@
 		)
 		(uuid "00dd299d-ee44-4946-be08-23c40036a53f")
 	)
-	(text "REV 2 WORK IN PROGRESS"
+	(text "REV 2.0\n10/19/25"
 		(exclude_from_sim no)
 		(at 230.378 179.832 0)
 		(effects
@@ -5863,7 +5863,7 @@
 		)
 		(uuid "2a6dbbe5-1489-4590-8150-4e011627542c")
 	)
-	(text "1.0"
+	(text "2.0"
 		(exclude_from_sim no)
 		(at 254.254 199.39 0)
 		(effects
@@ -6212,15 +6212,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff8219e2-ceed-440f-b2dc-672f3b2e0863")
-	)
-	(bus_entry
-		(at 105.41 16.51)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "373f720b-a7d6-4011-b558-9f89d1f0a336")
 	)
 	(wire
 		(pts
@@ -14563,6 +14554,24 @@
 		)
 		(property "Description" "Single channel 12bit SAR Analog to Digital Converter, I2C Interface, SOT-23-5"
 			(at 170.942 92.964 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyNumber" "MCP3221A0T-E/OTCT-ND"
+			(at 168.91 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerNumber" "MCP3221A0T-E/OT"
+			(at 168.91 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)

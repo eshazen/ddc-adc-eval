@@ -23,4 +23,4 @@ T = 9800 works well
 
 Rev 2 layout completed.  See top-level README for change details.
 
-
+DigiKey card for (3) sets:  https://www.digikey.com/short/bnw3t94d
