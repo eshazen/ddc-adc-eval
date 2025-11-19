@@ -21,10 +21,11 @@ See `led-photodiode-avr` design for working board.
 
 ## Version 2 ECOs
 
-Still need to check/update DigiKey numbers on all parts.
-
 ### Main board
 
+* **Address conflict** - U1 and U5 have the same address.
+<br>Need to cut trace to U5-13 and wire U15-13 to U15-16
+<br>This changes U5 address from 0x90 to 0x92
 * [done] Add transistors, expand to support 8 LEDs
 * [done] Change to common anode configuration (incl connector pinout)
 * [done] Correct external caps on DDC (2 -> 4 C's)

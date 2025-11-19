@@ -17,8 +17,15 @@
 #include "i2c.h"
 #include "led.h"
 #include "avr_adc.h"
+#include "mcp3221.h"
 
-// ADC channel for temp sensor
+// use MCP3221 ADC on Rev2 board
+#define ADC_I2C
+
+// number of readings to average (15 or fewer)
+#define ADC_AVG 10
+
+// ADC channel for temp sensor (using AVR)
 #define ADC_TEMP 6
 
 // create a file pointer for read/write to USART0
@@ -54,11 +61,18 @@ uint32_t sum1, sum2;
 uint16_t nsamp;
 
 double degC;
+double tSum;
+
+
 
 // convert ADC value to degrees C assuming thermistor
 // in 10k voltage divider with B25/85 = 3435K
 double adc_to_degC( uint32_t v) {
-  double af = v/1024.0;	/* ADC fraction */
+#ifdef ADC_I2C
+  double af = v/4096.0;	/* ADC fraction for 12-bit ADC */
+#else
+  double af = v/1024.0;	/* ADC fraction for 10-bit ADC*/
+#endif
   double r = af/(1.0-af); /* R(t) / 10k */
   double lr = log(r);		  /* ln( R(t)/10k) */
   /* constants for ThorLabs TH10K from datasheet */
@@ -67,6 +81,30 @@ double adc_to_degC( uint32_t v) {
   const double c = 2.13941e-6;
   const double d = -7.25325e-8;
   return (1.0 / (a + b*lr + c*pow(lr,2.0) + d*pow(lr,3.0))) - 273.15;
+}
+
+
+// read one (possibly averaged) temperature reading
+double get_temp() {
+  double t;
+#ifdef ADC_AVG
+      t = 0.;
+      for( int i=0; i<ADC_AVG; i++) {
+#endif
+
+#ifdef ADC_I2C
+      adc = read_3221();
+#else      
+      adc = ReadADC( t_int);
+#endif
+
+      t += adc_to_degC( adc);
+#ifdef ADC_AVG
+      _delay_ms(10);
+      }
+      t /= ADC_AVG;
+#endif
+      return t;
 }
 
 // format a scaled integer value with 3 fractional digits as xxx.xx
@@ -149,15 +187,13 @@ int main (void)
 
       // read the temperature (or any ADC)
     case 'E':
-      if( argc < 2)
-	t_int = ADC_TEMP;	/* default ADC channel */
-      else
-	t_int = iargv[1];	/* else command-line choice */
-      adc = ReadADC( t_int);
-      degC = adc_to_degC( adc);
+      t_int = ADC_TEMP;	/* default ADC channel */
+      degC = get_temp();
       pdec( (int)(degC * 1000.0));
       puts_P( PSTR(" degC"));
       break;
+      
+
 
       // enable charge inject (test) mode
     case 'C':
@@ -284,8 +320,7 @@ int main (void)
 	  sum1 = sum1 / (long)div;
 	  sum2 = sum2 / (long)div;
 	  if( cmd_2 == 'T') {			    /* cmd "AT" includes temperature */
-	    adc = ReadADC( ADC_TEMP);
-	    degC = adc_to_degC( adc);
+	    degC = get_temp();
 	    fdec( (int)(degC * 1000.0));
 	    printf("%d,%ld,%ld,%s\n",nsamp,sum1,sum2,buff); /* otherwise print average */
 	  } else {

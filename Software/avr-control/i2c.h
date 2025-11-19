@@ -8,7 +8,9 @@
 // #define BDIV (F_CPU / 400000 - 16) / 2 + 1    // Puts I2C rate 400kHz
 
 #define DAC_I2C_ADR 0x44
-#define MUX_I2C_ADR 0x90
+// after PCB patch, change MUX from 0x90 to 0x92
+#define MUX_I2C_ADR 0x92
+#define ADC_I2C_ADR 0x90
 
 void i2c_init(uint8_t bdiv);
 uint8_t i2c_io(uint8_t device_addr, uint8_t *ap, uint16_t an, 
